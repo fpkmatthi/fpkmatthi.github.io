@@ -3,15 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://fpkmatthi.xyz/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://fpkmatthi.xyz/tags/firsttime/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://fpkmatthi.xyz/posts/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fpkmatthi.xyz/posts/hello_world/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fpkmatthi.xyz/tags/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://fpkmatthi.xyz/categories/</loc>
   </url>
   
 </urlset>

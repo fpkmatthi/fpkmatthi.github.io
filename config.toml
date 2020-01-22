@@ -1,4 +1,4 @@
-baseurl = "http://fpkmatthi.xyz"
+baseurl = "https://fpkmatthi.xyz"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5

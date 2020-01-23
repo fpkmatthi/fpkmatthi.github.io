@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on A personal knowledge base</title>
+    <title>Categories on Matthias</title>
     <link>https://fpkmatthi.xyz/categories/</link>
-    <description>Recent content in Categories on A personal knowledge base</description>
+    <description>Recent content in Categories on Matthias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Matthias Van De Velde</copyright>
     
 	<atom:link href="https://fpkmatthi.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
     

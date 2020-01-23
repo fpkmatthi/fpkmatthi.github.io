@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
   
-    <title>Setting up my website enviroment :: A personal knowledge base — A simple, retro theme for Hugo</title>
+    <title>Setting up my website enviroment :: Matthias</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Portfolio This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
-ref: https://inside.getambassador.com/creating-and-deploying-your-first-hugo-site-to-github-pages-1e1f496cf88d
-Content  Kick-off Docker Hugo Github Pages Conclusion  Kick-off Create and open a new project folder
+<meta name="description" content="This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
+Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
 mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0."/>
-<meta name="keywords" content=", "/>
+<meta name="keywords" content="Hugo, Github Pages, Travis CI, Docker"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://fpkmatthi.xyz/posts/hello_world/" />
 
@@ -32,10 +31,9 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Setting up my website enviroment :: A personal knowledge base — A simple, retro theme for Hugo" />
-<meta name="twitter:description" content="Portfolio This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
-ref: https://inside.getambassador.com/creating-and-deploying-your-first-hugo-site-to-github-pages-1e1f496cf88d
-Content  Kick-off Docker Hugo Github Pages Conclusion  Kick-off Create and open a new project folder
+<meta name="twitter:title" content="Setting up my website enviroment :: Matthias — " />
+<meta name="twitter:description" content="This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
+Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
 mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0." />
 <meta name="twitter:site" content="https://fpkmatthi.xyz" />
@@ -45,10 +43,9 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Setting up my website enviroment :: A personal knowledge base — A simple, retro theme for Hugo">
-<meta property="og:description" content="Portfolio This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
-ref: https://inside.getambassador.com/creating-and-deploying-your-first-hugo-site-to-github-pages-1e1f496cf88d
-Content  Kick-off Docker Hugo Github Pages Conclusion  Kick-off Create and open a new project folder
+<meta property="og:title" content="Setting up my website enviroment :: Matthias — ">
+<meta property="og:description" content="This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
+Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
 mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0." />
 <meta property="og:url" content="https://fpkmatthi.xyz/posts/hello_world/" />
@@ -104,16 +101,6 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
     
 
     
-    <div class="spacer"></div>
-    <ul class="language-selector">
-      <ul class="language-selector-current">
-          <li>English ▾</li>
-      </ul>
-      <ul class="language-selector__more hidden">
-        
-      </ul>
-    </ul>
-    
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -126,9 +113,6 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
         <li><a href="/posts">Posts</a></li>
       
     
-    
-    <hr />
-        
     
   </ul>
 </nav>
@@ -160,7 +144,7 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
     
     #<a href="https://fpkmatthi.xyz/tags/firsttime/">firsttime</a>&nbsp;
     
-    #<a href="https://fpkmatthi.xyz/tags/"></a>&nbsp;
+    #<a href="https://fpkmatthi.xyz/tags/setup/">setup</a>&nbsp;
     
   </span>
   
@@ -170,16 +154,14 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
   
 
   <div class="post-content">
-    <h1 id="portfolio">Portfolio</h1>
-<p>This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.</p>
-<p>ref: <a href="https://inside.getambassador.com/creating-and-deploying-your-first-hugo-site-to-github-pages-1e1f496cf88d">https://inside.getambassador.com/creating-and-deploying-your-first-hugo-site-to-github-pages-1e1f496cf88d</a></p>
+    <p>This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.</p>
 <h2 id="content">Content</h2>
 <ul>
-<li>Kick-off</li>
-<li>Docker</li>
-<li>Hugo</li>
-<li>Github Pages</li>
-<li>Conclusion</li>
+<li><a href="#kick-off">Kick-off</a></li>
+<li><a href="#docker">Docker</a></li>
+<li><a href="#hugo">Hugo</a></li>
+<li><a href="#link-github-pages">Linking Github Pages</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
 </ul>
 <h2 id="kick-off">Kick-off</h2>
 <p>Create and open a new project folder</p>
@@ -210,13 +192,13 @@ cd ~/portfolio
 </span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker build -t hugo_portfolio .
 </code></pre></div><h2 id="hugo">Hugo</h2>
 <h3 id="creating-a-new-site">Creating a new site</h3>
-<p>Create a new site with hugo.
-init the website directory as a new git repo
-create a branch for the code
-add a theme
-commit
-push</p>
-<p>The <code>code</code> branch contains the code to generate the website.</p>
+<p>We&rsquo;re using docker to host Hugo and create a website in the shared directory.
+The generated code inside the new directory is then used to build the website.
+To host our website on Github Pages, we&rsquo;ll need the build files to be on the <code>master</code> branch,
+so we&rsquo;ll create en new branch that will contain the code. The website will be generated into <code>public</code> so
+we&rsquo;ll add to to our gitignore since we don&rsquo;t want this on the <code>code</code> branch.</p>
+<p>Here I&rsquo;m adding a theme but this is optional.</p>
+<p>You can now commit and push the <code>code</code> branch to the remote repo.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run --rm -it -v $PWD:/src -u hugo hugo_portfolio hugo new site fpkmatthi.github.io
 cd fpkmatthi.github.io
 
@@ -239,7 +221,7 @@ git commit -m <span style="color:#e6db74">&#34;Add theme submodule&#34;</span>
 
 git remote add origin git@github.com:fpkmatthi/portfoli-hug-o.git
 git push -u origin code
-</code></pre></div><p>The <code>master</code> branch contains the build files.</p>
+</code></pre></div><p>The <code>master</code> branch will contain <strong>only</strong> the build files.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run --rm <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -it <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -v $PWD:/src <span style="color:#ae81ff">\
@@ -262,7 +244,7 @@ git commit -m <span style="color:#e6db74">&#39;initial blog content&#39;</span>
 git push -u origin master
 
 <span style="color:#f92672">[</span><span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span><span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> rm -rf <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span>
-</code></pre></div><p>Build and serve the site locally.</p>
+</code></pre></div><p>To serve the site locally, we&rsquo;ll use Docker.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run --rm <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -it <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -v $PWD:/src <span style="color:#ae81ff">\
@@ -270,45 +252,45 @@ git push -u origin master
 </span><span style="color:#ae81ff"></span>    -u hugo hugo_portfolio hugo server <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -w <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --bind<span style="color:#f92672">=</span>0.0.0.0
-</code></pre></div><h3 id="linking-githubio">Linking github.io</h3>
+</code></pre></div><h3 id="linking-github-pages">Linking Github Pages</h3>
 <p>Create a personal access token for Travis CI, check the boxes for <code>public_repo</code>, <code>repo:status</code>, <code>repo_deployment</code>.</p>
 <p>Set the environment vars for:</p>
 <table>
 <thead>
 <tr>
-<th>var</th>
-<th>value</th>
+<th align="left">var</th>
+<th align="right">value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>GITHUB_USERNAME</td>
-<td>fpkmatthi</td>
+<td align="left">GITHUB_USERNAME</td>
+<td align="right">fpkmatthi</td>
 </tr>
 <tr>
-<td>GITHUB_TOKEN</td>
-<td>75e8b7y318ebf48df0bc35cp4affd79e167b2489</td>
+<td align="left">GITHUB_TOKEN</td>
+<td align="right">abcdefghijklmnopqrstuvwxyz0123456789abcd</td>
 </tr>
 <tr>
-<td>GITHUB_EMAIL</td>
-<td><a href="mailto:fpkmatthi@fpkmatthi.me">fpkmatthi@fpkmatthi.me</a></td>
+<td align="left">GITHUB_EMAIL</td>
+<td align="right"><a href="mailto:fpkmatthi@fpkmatthi.me">fpkmatthi@fpkmatthi.me</a></td>
 </tr>
 </tbody>
 </table>
 <p>Activate the repo</p>
 <p>Push .travis.yml to the code branch.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git checkout code
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Yaml" data-lang="Yaml">dist: xenial
-language: python
-python:
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Yaml" data-lang="Yaml"><span style="color:#66d9ef">dist</span>: xenial
+<span style="color:#66d9ef">language</span>: python
+<span style="color:#66d9ef">python</span>:
   - <span style="color:#e6db74">&#34;3.7&#34;</span>
 
-before_install:
+<span style="color:#66d9ef">before_install</span>:
   - sudo apt-get update -qq
   - sudo apt-get -yq install apt-transport-https tor curl
 
 <span style="color:#75715e"># install - install any dependencies required</span>
-install:
+<span style="color:#66d9ef">install</span>:
     <span style="color:#75715e"># Github may forbid request from travis container, so use tor proxy</span>
     - sudo systemctl start tor
     - download_command=<span style="color:#e6db74">&#39;curl -fsSL -x socks5h://127.0.0.1:9050&#39;</span> <span style="color:#75715e"># --socks5-hostname</span>
@@ -317,22 +299,22 @@ install:
     - rm -rf public <span style="color:#ae81ff">2</span>&gt; /dev/<span style="color:#66d9ef">null</span>
 
 <span style="color:#75715e"># script - run the build script</span>
-script:
+<span style="color:#66d9ef">script</span>:
     - hugo
     - echo <span style="color:#e6db74">&#34;fpkmatthi.xyz&#34;</span> &gt; public/CNAME
 
-deploy:
-  provider: pages
-  skip-cleanup: <span style="color:#66d9ef">true</span>
-  github-token: $GITHUB_TOKEN  <span style="color:#75715e"># Set in travis-ci.org dashboard, marked secure</span>
-  email: $GITHUB_EMAIL
-  name: $GITHUB_USERNAME
-  verbose: <span style="color:#66d9ef">true</span>
-  keep-history: <span style="color:#66d9ef">true</span>
-  local-dir: public
-  target_branch: master  <span style="color:#75715e"># branch contains blog content</span>
-  on:
-    branch: code  <span style="color:#75715e"># branch contains Hugo generator code</span>
+<span style="color:#66d9ef">deploy</span>:
+  <span style="color:#66d9ef">provider</span>: pages
+  <span style="color:#66d9ef">skip-cleanup</span>: <span style="color:#66d9ef">true</span>
+  <span style="color:#66d9ef">github-token</span>: $GITHUB_TOKEN  <span style="color:#75715e"># Set in travis-ci.org dashboard, marked secure</span>
+  <span style="color:#66d9ef">email</span>: $GITHUB_EMAIL
+  <span style="color:#66d9ef">name</span>: $GITHUB_USERNAME
+  <span style="color:#66d9ef">verbose</span>: <span style="color:#66d9ef">true</span>
+  <span style="color:#66d9ef">keep-history</span>: <span style="color:#66d9ef">true</span>
+  <span style="color:#66d9ef">local-dir</span>: public
+  <span style="color:#66d9ef">target_branch</span>: master  <span style="color:#75715e"># branch contains blog content</span>
+  <span style="color:#66d9ef">on</span>:
+    <span style="color:#66d9ef">branch</span>: code  <span style="color:#75715e"># branch contains Hugo generator code</span>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git add .
 git commit -m <span style="color:#e6db74">&#34;Add travis.yml&#34;</span>
 git push
@@ -344,11 +326,38 @@ git push
 alias hugo-server<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo hugo_portfolio hugo server --bind 0.0.0.0&#39;</span>
 </code></pre></div><h2 id="using-continuous-integration-to-ease-your-pain">Using Continuous Integration to ease your pain</h2>
 <p>Travis CI is now triggerd to build your site when you push something on the <code>code</code> branch. These build files are then pushed to the master branch of the same repo.</p>
-<p><a href="https://medium.com/swlh/hosting-a-hugo-blog-on-github-pages-with-travis-ci-e74a1d686f10">https://medium.com/swlh/hosting-a-hugo-blog-on-github-pages-with-travis-ci-e74a1d686f10</a></p>
-<p><a href="https://github.com/fpkmatthi/fpkmatthi.github.io">https://github.com/fpkmatthi/fpkmatthi.github.io</a></p>
-<p><a href="https://github.com/fpkmatthi/portfoli-hug-o">https://github.com/fpkmatthi/portfoli-hug-o</a></p>
-<p><a href="https://github.com/panr/hugo-theme-terminal">https://github.com/panr/hugo-theme-terminal</a></p>
+<h2 id="problems-i-encountered">Problems I encountered</h2>
+<ol>
+<li>The page has no CSS when visiting it on github. When you open the developer console, there are a few errors like &ldquo;Blocked loading mixed active content&rdquo;</li>
+</ol>
+<ul>
+<li>Make sure the <code>baseurl</code> in the site config <strong>config.toml</strong> uses https (e.g. <a href="https://fpkmatthi.xyz/">https://fpkmatthi.xyz/</a>) if Github Pages is configured to use HTTPS as well.</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/">https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/</a></li>
+<li><a href="https://github.com/panr/hugo-theme-terminal">https://github.com/panr/hugo-theme-terminal</a></li>
+</ul>
 
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="https://fpkmatthi.xyz/posts/dotfiles/">
+          <span class="button__icon">←</span>
+          <span class="button__text">My ~/dotfile setup</span>
+        </a>
+      </span>
+      
+      
+    </div>
   </div>
   
 
@@ -362,8 +371,8 @@ alias hugo-server<span style="color:#f92672">=</span><span style="color:#e6db74"
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright">
-        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+      <div class="copyright copyright--user">
+        <span>Matthias Van De Velde</span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>

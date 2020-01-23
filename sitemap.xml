@@ -3,17 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://fpkmatthi.xyz/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <loc>https://fpkmatthi.xyz/tags/bspwm/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fpkmatthi.xyz/tags/firsttime/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <loc>https://fpkmatthi.xyz/tags/dotfiles/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/posts/dotfiles/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fpkmatthi.xyz/posts/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/tags/sxhkd/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/tags/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/tags/tmux/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/tags/vim/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/tags/firsttime/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://fpkmatthi.xyz/tags/</loc>
+    <loc>https://fpkmatthi.xyz/tags/setup/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url>
   

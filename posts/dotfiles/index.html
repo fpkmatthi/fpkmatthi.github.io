@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>My ~/dotfile setup :: Matthias</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="This method involves using a Bare Git repo. You can find the dotfiles for my daily driver here
+Content  Starting a new repo Deploying dotfiles on a new system Final script  Starting a new repo Create a bare repo and an alias for git to work in that repo. Hide untracked files in config status. Put the alias in your shell config (e.g. bashrc). This way, you can use the alias when you open a new shell."/>
+<meta name="keywords" content=", "/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://fpkmatthi.xyz/posts/dotfiles/" />
+
+
+<link rel="stylesheet" href="https://fpkmatthi.xyz/assets/style.css">
+
+  <link rel="stylesheet" href="https://fpkmatthi.xyz/assets/blue.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://fpkmatthi.xyz/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://fpkmatthi.xyz/img/favicon/blue.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="My ~/dotfile setup :: Matthias — " />
+<meta name="twitter:description" content="This method involves using a Bare Git repo. You can find the dotfiles for my daily driver here
+Content  Starting a new repo Deploying dotfiles on a new system Final script  Starting a new repo Create a bare repo and an alias for git to work in that repo. Hide untracked files in config status. Put the alias in your shell config (e.g. bashrc). This way, you can use the alias when you open a new shell." />
+<meta name="twitter:site" content="https://fpkmatthi.xyz" />
+<meta name="twitter:creator" content="Matthias Van De Velde" />
+<meta name="twitter:image" content="https://fpkmatthi.xyz/img/desktop.png">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="My ~/dotfile setup :: Matthias — ">
+<meta property="og:description" content="This method involves using a Bare Git repo. You can find the dotfiles for my daily driver here
+Content  Starting a new repo Deploying dotfiles on a new system Final script  Starting a new repo Create a bare repo and an alias for git to work in that repo. Hide untracked files in config status. Put the alias in your shell config (e.g. bashrc). This way, you can use the alias when you open a new shell." />
+<meta property="og:url" content="https://fpkmatthi.xyz/posts/dotfiles/" />
+<meta property="og:site_name" content="My ~/dotfile setup" />
+<meta property="og:image" content="https://fpkmatthi.xyz/img/desktop.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2020-01-23 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Matthias Van De Velde
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://fpkmatthi.xyz/posts/dotfiles/">My ~/dotfile setup</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2020-01-23
+    </span>
+    
+    
+    <span class="post-author">::
+      Matthias Van De Velde
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://fpkmatthi.xyz/tags/dotfiles/">dotfiles</a>&nbsp;
+    
+    #<a href="https://fpkmatthi.xyz/tags/bspwm/">bspwm</a>&nbsp;
+    
+    #<a href="https://fpkmatthi.xyz/tags/sxhkd/">sxhkd</a>&nbsp;
+    
+    #<a href="https://fpkmatthi.xyz/tags/vim/">vim</a>&nbsp;
+    
+    #<a href="https://fpkmatthi.xyz/tags/tmux/">tmux</a>&nbsp;
+    
+    #<a href="https://fpkmatthi.xyz/tags/"></a>&nbsp;
+    
+  </span>
+  
+
+  
+  <img src="https://fpkmatthi.xyz/img/desktop.png" class="post-cover" />
+  
+
+  <div class="post-content">
+    <p>This method involves using a Bare Git repo. You can find the dotfiles for my daily driver <a href="https://github.com/fpkmatthi/dotfiles-ideapad">here</a></p>
+<h2 id="content">Content</h2>
+<ul>
+<li><a href="#starting-a-new-repo">Starting a new repo</a></li>
+<li><a href="#deploying-dotfiles-on-a-new-system">Deploying dotfiles on a new system</a></li>
+<li><a href="#final-script">Final script</a></li>
+</ul>
+<h2 id="starting-a-new-repo">Starting a new repo</h2>
+<p>Create a bare repo and an alias for git to work in that repo.
+Hide untracked files in <code>config status</code>.
+Put the alias in your shell config (e.g. bashrc).
+This way, you can use the alias when you open a new shell.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git init --bare $HOME/.cfg
+alias config<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME&#39;</span>
+config config --local status.showUntrackedFiles no
+echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">alias config=&#39;/usr/bin/git --git-dir=</span>$HOME<span style="color:#e6db74">/.cfg/ --work-tree=</span>$HOME<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;</span> &gt;&gt; $HOME/.bashrc
+</code></pre></div><p>An example on how to use it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">config status
+config add .vimrc
+config commit -m <span style="color:#e6db74">&#34;Add vimrc&#34;</span>
+
+config remote add https://github.com/fpkmatthi/dotfiles-ideapad.git
+config push -u origin
+</code></pre></div><h2 id="deploying-dotfiles-on-a-new-system">Deploying dotfiles on a new system</h2>
+<p>Configure the alias, let the source repo ignore the folder where it will be cloned and then clone the repo.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">alias config=&#39;/usr/bin/git --git-dir=</span>$HOME<span style="color:#e6db74">/.cfg/ --work-tree=</span>$HOME<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;</span> &gt;&gt; $HOME/.bashrc
+echo <span style="color:#e6db74">&#34;.cfg&#34;</span> &gt;&gt; .gitignore
+git clone --bare &lt;git-repo-url&gt; $HOME/.cfg
+alias config<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME&#39;</span>
+</code></pre></div><p>Checkout the actual content from the repo.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">config checkout
+</code></pre></div><p>If you receiver an error like this:</p>
+<pre><code>error: The following untracked working tree files would be overwritten by checkout:
+    .bashrc
+    .gitignore
+Please move or remove them before you can switch branches.
+Aborting
+</code></pre><p>Backup the files that cause an error and checkout again.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mkdir -p .config-backup <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>config checkout 2&gt;&amp;<span style="color:#ae81ff">1</span> | egrep <span style="color:#e6db74">&#34;\s+\.&#34;</span> | awk <span style="color:#f92672">{</span><span style="color:#e6db74">&#39;print $1&#39;</span><span style="color:#f92672">}</span> | <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>xargs -I<span style="color:#f92672">{</span><span style="color:#f92672">}</span> mv <span style="color:#f92672">{</span><span style="color:#f92672">}</span> .config-backup/<span style="color:#f92672">{</span><span style="color:#f92672">}</span>
+
+config checkout
+</code></pre></div><p>Hide untracked files in <code>config status</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">config config --local status.showUntrackedFiles no
+</code></pre></div><h2 id="final-script">Final script</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git clone --bare https://github.com/fpkmatthi/dotfiles-ideapad.git $HOME/.cfg
+
+<span style="color:#66d9ef">function</span> config<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   /usr/bin/git --git-dir<span style="color:#f92672">=</span>$HOME/.cfg/ --work-tree<span style="color:#f92672">=</span>$HOME $@
+<span style="color:#f92672">}</span>
+
+mkdir -p .config-backup
+
+config checkout
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+  echo <span style="color:#e6db74">&#34;Checked out config.&#34;</span>
+<span style="color:#66d9ef">else</span>
+    echo <span style="color:#e6db74">&#34;Backing up pre-existing dot files.&#34;</span>
+    config checkout 2&gt;&amp;<span style="color:#ae81ff">1</span> | egrep <span style="color:#e6db74">&#34;\s+\.&#34;</span> | awk <span style="color:#f92672">{</span><span style="color:#e6db74">&#39;print $1&#39;</span><span style="color:#f92672">}</span> | xargs -I<span style="color:#f92672">{</span><span style="color:#f92672">}</span> mv <span style="color:#f92672">{</span><span style="color:#f92672">}</span> .config-backup/<span style="color:#f92672">{</span><span style="color:#f92672">}</span>
+<span style="color:#66d9ef">fi</span>
+
+config checkout
+config config status.showUntrackedFiles no
+</code></pre></div><h2 id="post-deploy-steps">Post deploy steps</h2>
+<ol>
+<li>Install the Hack font, located in ~/.config/hack</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cp -r ~/.config/hack /usr/share/fonts
+fc-cache -f -v
+</code></pre></div><h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.atlassian.com/git/tutorials/dotfiles">https://www.atlassian.com/git/tutorials/dotfiles</a></li>
+</ul>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="https://fpkmatthi.xyz/posts/hello_world/">
+          <span class="button__text">Setting up my website enviroment</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Matthias Van De Velde</span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://fpkmatthi.xyz/assets/main.js"></script>
+<script src="https://fpkmatthi.xyz/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

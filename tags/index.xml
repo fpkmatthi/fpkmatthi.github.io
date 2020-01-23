@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on A personal knowledge base</title>
+    <title>Tags on Matthias</title>
     <link>https://fpkmatthi.xyz/tags/</link>
-    <description>Recent content in Tags on A personal knowledge base</description>
+    <description>Recent content in Tags on Matthias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <copyright>Matthias Van De Velde</copyright>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fpkmatthi.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bspwm</title>
+      <link>https://fpkmatthi.xyz/tags/bspwm/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/tags/bspwm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>https://fpkmatthi.xyz/tags/dotfiles/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/tags/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sxhkd</title>
+      <link>https://fpkmatthi.xyz/tags/sxhkd/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/tags/sxhkd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tmux</title>
+      <link>https://fpkmatthi.xyz/tags/tmux/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/tags/tmux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://fpkmatthi.xyz/tags/vim/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/tags/vim/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>firsttime</title>
@@ -17,6 +63,15 @@
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://fpkmatthi.xyz/tags/firsttime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>setup</title>
+      <link>https://fpkmatthi.xyz/tags/setup/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/tags/setup/</guid>
       <description></description>
     </item>
     

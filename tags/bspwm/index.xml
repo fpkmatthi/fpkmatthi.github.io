@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Matthias</title>
-    <link>https://fpkmatthi.xyz/</link>
-    <description>Recent content on Matthias</description>
+    <title>bspwm on Matthias</title>
+    <link>https://fpkmatthi.xyz/tags/bspwm/</link>
+    <description>Recent content in bspwm on Matthias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Matthias Van De Velde</copyright>
     <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://fpkmatthi.xyz/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fpkmatthi.xyz/tags/bspwm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,18 +20,6 @@
       <guid>https://fpkmatthi.xyz/posts/dotfiles/</guid>
       <description>This method involves using a Bare Git repo. You can find the dotfiles for my daily driver here
 Content  Starting a new repo Deploying dotfiles on a new system Final script  Starting a new repo Create a bare repo and an alias for git to work in that repo. Hide untracked files in config status. Put the alias in your shell config (e.g. bashrc). This way, you can use the alias when you open a new shell.</description>
-    </item>
-    
-    <item>
-      <title>Setting up my website enviroment</title>
-      <link>https://fpkmatthi.xyz/posts/hello_world/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fpkmatthi.xyz/posts/hello_world/</guid>
-      <description>This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
-Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
-mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
-FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0.</description>
     </item>
     
   </channel>

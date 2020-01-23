@@ -14,7 +14,7 @@ paginate = 5
   showMenuItems = 3
 
   # show selector to switch language
-  showLanguageSelector = true
+  showLanguageSelector = false
 
   # set theme to full screen width
   fullWidthTheme = false
@@ -32,10 +32,9 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "A personal knowledge base"
-    subtitle = "A simple, retro theme for Hugo"
+    title = "Matthias"
     keywords = ""
-    copyright = ""
+    copyright = "Matthias Van De Velde"
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
@@ -53,3 +52,6 @@ paginate = 5
         identifier = "posts"
         name = "Posts"
         url = "/posts"
+
+[markup.goldmark.renderer]
+unsafe= true

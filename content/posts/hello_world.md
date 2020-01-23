@@ -3,25 +3,22 @@ title = "Setting up my website enviroment"
 date = "2020-01-20"
 author = "Matthias Van De Velde"
 cover = "img/digi_world.jpg"
-tags = ["firsttime", ""]
-keywords = ["", ""]
+tags = ["firsttime", "setup"]
+keywords = ["Hugo", "Github Pages", "Travis CI", "Docker"]
 description = "This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio."
 showFullContent = false
+draft = false
 +++
-
-# Portfolio
 
 This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
 
-ref: https://inside.getambassador.com/creating-and-deploying-your-first-hugo-site-to-github-pages-1e1f496cf88d
-
 ## Content
 
-* Kick-off
-* Docker
-* Hugo
-* Github Pages
-* Conclusion
+* [Kick-off](#kick-off)
+* [Docker](#docker)
+* [Hugo](#hugo)
+* [Linking Github Pages](#link-github-pages)
+* [Conclusion](#conclusion)
 
 ## Kick-off
 
@@ -72,14 +69,15 @@ docker build -t hugo_portfolio .
 
 ### Creating a new site
 
-Create a new site with hugo.
-init the website directory as a new git repo
-create a branch for the code
-add a theme
-commit
-push
+We're using docker to host Hugo and create a website in the shared directory.
+The generated code inside the new directory is then used to build the website.
+To host our website on Github Pages, we'll need the build files to be on the `master` branch,
+so we'll create en new branch that will contain the code. The website will be generated into `public` so 
+we'll add to to our gitignore since we don't want this on the `code` branch.
 
-The `code` branch contains the code to generate the website.
+Here I'm adding a theme but this is optional.
+
+You can now commit and push the `code` branch to the remote repo.
 
 ```Bash
 docker run --rm -it -v $PWD:/src -u hugo hugo_portfolio hugo new site fpkmatthi.github.io
@@ -106,7 +104,7 @@ git remote add origin git@github.com:fpkmatthi/portfoli-hug-o.git
 git push -u origin code
 ```
 
-The `master` branch contains the build files.
+The `master` branch will contain **only** the build files.
 
 ```Bash
 docker run --rm \
@@ -133,7 +131,7 @@ git push -u origin master
 [[ -d "$HUGO_TEMP_DIR" ]] && rm -rf "$HUGO_TEMP_DIR"
 ```
 
-Build and serve the site locally.
+To serve the site locally, we'll use Docker.
 
 ```Bash
 docker run --rm \
@@ -145,17 +143,17 @@ docker run --rm \
     --bind=0.0.0.0
 ```
 
-### Linking github.io
+### Linking Github Pages
 
 Create a personal access token for Travis CI, check the boxes for `public_repo`, `repo:status`, `repo_deployment`.
 
 Set the environment vars for:
 
-| var | value |
-| --- | --- |
-|GITHUB_USERNAME|fpkmatthi|
-|GITHUB_TOKEN|75e8b7y318ebf48df0bc35cp4affd79e167b2489|
-|GITHUB_EMAIL|fpkmatthi@fpkmatthi.me|
+| var             | value                                    |
+| :---            | ---:                                     |
+| GITHUB_USERNAME | fpkmatthi                                |
+| GITHUB_TOKEN    | abcdefghijklmnopqrstuvwxyz0123456789abcd |
+| GITHUB_EMAIL    | fpkmatthi@fpkmatthi.me                   |
 
 Activate the repo
 
@@ -228,11 +226,13 @@ alias hugo-server='docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo hugo_po
 
 Travis CI is now triggerd to build your site when you push something on the `code` branch. These build files are then pushed to the master branch of the same repo.
 
+## Problems I encountered
 
-https://medium.com/swlh/hosting-a-hugo-blog-on-github-pages-with-travis-ci-e74a1d686f10
+1. The page has no CSS when visiting it on github. When you open the developer console, there are a few errors like "Blocked loading mixed active content"
 
-https://github.com/fpkmatthi/fpkmatthi.github.io
+* Make sure the `baseurl` in the site config **config.toml** uses https (e.g. https://fpkmatthi.xyz/) if Github Pages is configured to use HTTPS as well.
 
-https://github.com/fpkmatthi/portfoli-hug-o
+## References
 
-https://github.com/panr/hugo-theme-terminal
+* https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/
+* https://github.com/panr/hugo-theme-terminal

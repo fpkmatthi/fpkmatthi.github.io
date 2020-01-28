@@ -31,7 +31,7 @@ cd ~/portfolio
 
 ## Docker
 
-### Install docker (refer to the [Arch Wiki]())
+### Install docker (refer to the [Arch Wiki](https://wiki.archlinux.org/index.php/Docker#Installation) ¯\\_(ツ)_/¯ )
 
 ```Bash
 sudo pacman -S docker
@@ -69,11 +69,11 @@ docker build -t hugo_portfolio .
 
 ### Creating a new site
 
-We're using docker to host Hugo and create a website in the shared directory.
+I use docker to host Hugo and create a website in the shared directory.
 The generated code inside the new directory is then used to build the website.
-To host our website on Github Pages, we'll need the build files to be on the `master` branch,
-so we'll create en new branch that will contain the code. The website will be generated into `public` so 
-we'll add to to our gitignore since we don't want this on the `code` branch.
+To host our website on Github Pages, I'll need the build files to be on the `master` branch,
+so I'll create en new branch that will contain the code. The website will be generated into `public` so 
+I'll add to to our gitignore since I don't want this on the `code` branch.
 
 Here I'm adding a theme but this is optional.
 
@@ -131,7 +131,7 @@ git push -u origin master
 [[ -d "$HUGO_TEMP_DIR" ]] && rm -rf "$HUGO_TEMP_DIR"
 ```
 
-To serve the site locally, we'll use Docker.
+To serve the site locally, I'll use Docker.
 
 ```Bash
 docker run --rm \
@@ -145,15 +145,20 @@ docker run --rm \
 
 ### Linking Github Pages
 
-Create a personal access token for Travis CI, check the boxes for `public_repo`, `repo:status`, `repo_deployment`.
+Create a personal access token for Travis CI on github.
+Check the boxes for `public_repo`, `repo:status`, `repo_deployment`.
 
-Set the environment vars for:
+![github settings](/img/github.png)
+
+Set the environment vars for the repo in Travis CI:
 
 | var             | value                                    |
 | :---            | ---:                                     |
 | GITHUB_USERNAME | fpkmatthi                                |
 | GITHUB_TOKEN    | abcdefghijklmnopqrstuvwxyz0123456789abcd |
 | GITHUB_EMAIL    | fpkmatthi@fpkmatthi.me                   |
+
+![travis repo settings](/img/travis.png)
 
 Activate the repo
 
@@ -206,6 +211,10 @@ git add .
 git commit -m "Add travis.yml"
 git push
 ```
+
+Travis should now be triggered. After a while the site will be built.
+
+![build status](/img/build.png)
 
 Add a post
 

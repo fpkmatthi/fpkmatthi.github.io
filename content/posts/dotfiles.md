@@ -89,6 +89,8 @@ config config --local status.showUntrackedFiles no
 ## Final script
 
 ```Bash
+#!/usr/bin/env sh
+# deploy-dotfiles.sh
 git clone --bare https://github.com/fpkmatthi/dotfiles-ideapad.git $HOME/.cfg
 
 function config() {
@@ -117,6 +119,13 @@ config config status.showUntrackedFiles no
 ```Bash
 cp -r ~/.config/hack /usr/share/fonts
 fc-cache -f -v
+```
+
+## Test the setup on a container
+
+```Bash
+docker run -it -v $PWD:/src alpine /bin/sh /src/deploy-dotfiles.sh
+docker run -it -v $PWD:/src alpine /bin/ls
 ```
 
 ## References

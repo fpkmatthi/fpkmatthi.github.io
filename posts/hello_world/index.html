@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
 Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
-mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
+mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki ¯\(ツ)/¯ ) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0."/>
 <meta name="keywords" content="Hugo, Github Pages, Travis CI, Docker"/>
 <meta name="robots" content="noodp"/>
@@ -34,7 +34,7 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
 <meta name="twitter:title" content="Setting up my website enviroment :: Matthias — " />
 <meta name="twitter:description" content="This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
 Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
-mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
+mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki ¯\(ツ)/¯ ) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0." />
 <meta name="twitter:site" content="https://fpkmatthi.xyz" />
 <meta name="twitter:creator" content="Matthias Van De Velde" />
@@ -46,7 +46,7 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
 <meta property="og:title" content="Setting up my website enviroment :: Matthias — ">
 <meta property="og:description" content="This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
 Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
-mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
+mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki ¯\(ツ)/¯ ) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0." />
 <meta property="og:url" content="https://fpkmatthi.xyz/posts/hello_world/" />
 <meta property="og:site_name" content="Setting up my website enviroment" />
@@ -168,7 +168,7 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mkdir -p ~/portfolio
 cd ~/portfolio
 </code></pre></div><h2 id="docker">Docker</h2>
-<h3 id="install-docker-refer-to-the-arch-wiki">Install docker (refer to the <a href="">Arch Wiki</a>)</h3>
+<h3 id="install-docker-refer-to-the-arch-wikihttpswikiarchlinuxorgindexphpdockerinstallation-_ツ_-">Install docker (refer to the <a href="https://wiki.archlinux.org/index.php/Docker#Installation">Arch Wiki</a> ¯\<em>(ツ)</em>/¯ )</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">sudo pacman -S docker
 </code></pre></div><h3 id="creating-docker-image">Creating docker image</h3>
 <p>Alpine Linux is used as the base image</p>
@@ -192,11 +192,11 @@ cd ~/portfolio
 </span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker build -t hugo_portfolio .
 </code></pre></div><h2 id="hugo">Hugo</h2>
 <h3 id="creating-a-new-site">Creating a new site</h3>
-<p>We&rsquo;re using docker to host Hugo and create a website in the shared directory.
+<p>I use docker to host Hugo and create a website in the shared directory.
 The generated code inside the new directory is then used to build the website.
-To host our website on Github Pages, we&rsquo;ll need the build files to be on the <code>master</code> branch,
-so we&rsquo;ll create en new branch that will contain the code. The website will be generated into <code>public</code> so
-we&rsquo;ll add to to our gitignore since we don&rsquo;t want this on the <code>code</code> branch.</p>
+To host our website on Github Pages, I&rsquo;ll need the build files to be on the <code>master</code> branch,
+so I&rsquo;ll create en new branch that will contain the code. The website will be generated into <code>public</code> so
+I&rsquo;ll add to to our gitignore since I don&rsquo;t want this on the <code>code</code> branch.</p>
 <p>Here I&rsquo;m adding a theme but this is optional.</p>
 <p>You can now commit and push the <code>code</code> branch to the remote repo.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run --rm -it -v $PWD:/src -u hugo hugo_portfolio hugo new site fpkmatthi.github.io
@@ -244,7 +244,7 @@ git commit -m <span style="color:#e6db74">&#39;initial blog content&#39;</span>
 git push -u origin master
 
 <span style="color:#f92672">[</span><span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span><span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> rm -rf <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span>
-</code></pre></div><p>To serve the site locally, we&rsquo;ll use Docker.</p>
+</code></pre></div><p>To serve the site locally, I&rsquo;ll use Docker.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run --rm <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -it <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -v $PWD:/src <span style="color:#ae81ff">\
@@ -253,8 +253,10 @@ git push -u origin master
 </span><span style="color:#ae81ff"></span>    -w <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --bind<span style="color:#f92672">=</span>0.0.0.0
 </code></pre></div><h3 id="linking-github-pages">Linking Github Pages</h3>
-<p>Create a personal access token for Travis CI, check the boxes for <code>public_repo</code>, <code>repo:status</code>, <code>repo_deployment</code>.</p>
-<p>Set the environment vars for:</p>
+<p>Create a personal access token for Travis CI on github.
+Check the boxes for <code>public_repo</code>, <code>repo:status</code>, <code>repo_deployment</code>.</p>
+<p><img src="/img/github.png" alt="github settings"></p>
+<p>Set the environment vars for the repo in Travis CI:</p>
 <table>
 <thead>
 <tr>
@@ -277,6 +279,7 @@ git push -u origin master
 </tr>
 </tbody>
 </table>
+<p><img src="/img/travis.png" alt="travis repo settings"></p>
 <p>Activate the repo</p>
 <p>Push .travis.yml to the code branch.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git checkout code
@@ -318,7 +321,9 @@ git push -u origin master
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git add .
 git commit -m <span style="color:#e6db74">&#34;Add travis.yml&#34;</span>
 git push
-</code></pre></div><p>Add a post</p>
+</code></pre></div><p>Travis should now be triggered. After a while the site will be built.</p>
+<p><img src="/img/build.png" alt="build status"></p>
+<p>Add a post</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run --rm -it -v $PWD:/src -u hugo hugo_portfolio hugo new posts/hello_world.md
 </code></pre></div><h3 id="some-jedi-mind-tricks">Some Jedi mind tricks</h3>
 <p>Create an alias in your shell config file (e.g. .bashrc).</p>

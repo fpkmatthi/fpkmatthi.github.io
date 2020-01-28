@@ -20,7 +20,7 @@
       <guid>https://fpkmatthi.xyz/posts/hello_world/</guid>
       <description>This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
 Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
-mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
+mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki ¯\(ツ)/¯ ) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0.</description>
     </item>
     

@@ -202,7 +202,9 @@ config checkout
 </code></pre></div><p>Hide untracked files in <code>config status</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">config config --local status.showUntrackedFiles no
 </code></pre></div><h2 id="final-script">Final script</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git clone --bare https://github.com/fpkmatthi/dotfiles-ideapad.git $HOME/.cfg
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash"><span style="color:#75715e">#!/usr/bin/env sh
+</span><span style="color:#75715e"></span><span style="color:#75715e"># deploy-dotfiles.sh</span>
+git clone --bare https://github.com/fpkmatthi/dotfiles-ideapad.git $HOME/.cfg
 
 <span style="color:#66d9ef">function</span> config<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
    /usr/bin/git --git-dir<span style="color:#f92672">=</span>$HOME/.cfg/ --work-tree<span style="color:#f92672">=</span>$HOME $@
@@ -227,6 +229,9 @@ config config status.showUntrackedFiles no
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cp -r ~/.config/hack /usr/share/fonts
 fc-cache -f -v
+</code></pre></div><h2 id="test-the-setup-on-a-container">Test the setup on a container</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run -it -v $PWD:/src alpine /bin/sh /src/deploy-dotfiles.sh
+docker run -it -v $PWD:/src alpine /bin/ls
 </code></pre></div><h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.atlassian.com/git/tutorials/dotfiles">https://www.atlassian.com/git/tutorials/dotfiles</a></li>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  
+    <title>Proxmox Wake-On-LAN - alx driver patch :: Matthias</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found here
+ Download the patch  wget -O patch.tar.gz https://bugzilla.kernel.org/attachment.cgi?id=284877 Extract the archive  mkdir ./patch tar xvzf patch.tar.gz -C ./patch Add the PVE No-Subscription repo to the apt sources and install the current kernel headers  echo &amp;#34;deb http://download."/>
+<meta name="keywords" content=", "/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://fpkmatthi.xyz/posts/proxmox-wol/" />
+
+
+
+
+<link rel="stylesheet" href="https://fpkmatthi.xyz/assets/style.css">
+
+  <link rel="stylesheet" href="https://fpkmatthi.xyz/assets/blue.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://fpkmatthi.xyz/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://fpkmatthi.xyz/img/favicon/blue.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Proxmox Wake-On-LAN - alx driver patch :: Matthias — " />
+<meta name="twitter:description" content="At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found here
+ Download the patch  wget -O patch.tar.gz https://bugzilla.kernel.org/attachment.cgi?id=284877 Extract the archive  mkdir ./patch tar xvzf patch.tar.gz -C ./patch Add the PVE No-Subscription repo to the apt sources and install the current kernel headers  echo &amp;#34;deb http://download." />
+<meta name="twitter:site" content="https://fpkmatthi.xyz" />
+<meta name="twitter:creator" content="Matthias Van De Velde" />
+<meta name="twitter:image" content="https://fpkmatthi.xyz/img/proxmox.jpg">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Proxmox Wake-On-LAN - alx driver patch :: Matthias — ">
+<meta property="og:description" content="At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found here
+ Download the patch  wget -O patch.tar.gz https://bugzilla.kernel.org/attachment.cgi?id=284877 Extract the archive  mkdir ./patch tar xvzf patch.tar.gz -C ./patch Add the PVE No-Subscription repo to the apt sources and install the current kernel headers  echo &amp;#34;deb http://download." />
+<meta property="og:url" content="https://fpkmatthi.xyz/posts/proxmox-wol/" />
+<meta property="og:site_name" content="Proxmox Wake-On-LAN - alx driver patch" />
+<meta property="og:image" content="https://fpkmatthi.xyz/img/proxmox.jpg">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2020-01-28 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Matthias Van De Velde
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://fpkmatthi.xyz/posts/proxmox-wol/">Proxmox Wake-On-LAN - alx driver patch</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2020-01-28
+    </span>
+    
+    
+    <span class="post-author">::
+      Matthias Van De Velde
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://fpkmatthi.xyz/tags/proxmox/">Proxmox</a>&nbsp;
+    
+    #<a href="https://fpkmatthi.xyz/tags/alx/">alx</a>&nbsp;
+    
+    #<a href="https://fpkmatthi.xyz/tags/wol/">WOL</a>&nbsp;
+    
+  </span>
+  
+
+  
+  <img src="https://fpkmatthi.xyz/img/proxmox.jpg" class="post-cover" />
+  
+
+  <div class="post-content"><div>
+        <p>At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found <a href="https://bugzilla.kernel.org/show_bug.cgi?id=61651">here</a></p>
+<ol>
+<li>Download the patch</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">wget -O patch.tar.gz https://bugzilla.kernel.org/attachment.cgi?id<span style="color:#f92672">=</span><span style="color:#ae81ff">284877</span>
+</code></pre></div><ol start="2">
+<li>Extract the archive</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mkdir ./patch
+tar xvzf patch.tar.gz -C ./patch
+</code></pre></div><ol start="3">
+<li>Add the PVE No-Subscription repo to the apt sources and install the current kernel headers</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">echo <span style="color:#e6db74">&#34;deb http://download.proxmox.com/debian/pve buster pve-no-subscription&#34;</span> &gt;&gt; /etc/apt/sources.list
+apt-get update
+<span style="color:#75715e"># the headers are specific to your kernel version!!</span>
+apt-get install git sudo ethtool pve-headers-5.3.10-1-pve
+</code></pre></div><p><strong>NOTE:</strong> If you get an error about &ldquo;Failed to fetch&rdquo; because of security issues, comment the line in <code>/etc/apt/sources.list.d/pve-enterprise.list</code> and retry.</p>
+<ol start="4">
+<li>Execute the setup script</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">./patch/qlx-dkms-installer/setup
+</code></pre></div><ol start="5">
+<li>Create a script to fix interfaces and reload the alx kernel module</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash"><span style="color:#75715e">#!/usr/bin/env bash
+</span><span style="color:#75715e"></span>
+modprobe -r alx <span style="color:#f92672">&amp;&amp;</span> modprobe alx
+
+ip link set enp6s0 down
+systemctl restart networking.service
+ip link set enp6s0 up
+</code></pre></div><ol start="6">
+<li>Copy script to /usr/bin and make it executable</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">sudo cp test_service.sh /usr/bin/test_service.sh
+sudo chmod +x /usr/bin/test_service.sh
+</code></pre></div><ol start="7">
+<li>Create systemd service file to run the script at startup</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Systemd" data-lang="Systemd"><span style="color:#66d9ef">[Unit]</span>
+<span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">fix the interface for WOL</span>
+
+<span style="color:#66d9ef">[Service]</span>
+<span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">simple</span>
+<span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/bin/bash /usr/bin/fix-int.sh</span>
+
+<span style="color:#66d9ef">[Install]</span>
+<span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">sudo cp /lib/systemd/system/fix-int.service /etc/systemd/system/fix-int.service
+sudo chmod <span style="color:#ae81ff">644</span> /etc/systemd/system/fix-int.service
+systemctl start fix-int.service
+systemctl enable fix-int.service
+</code></pre></div><ol start="8">
+<li>Enable WOL on the connected interface</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">ethtool -s enp6s0 wol g
+</code></pre></div><ol start="9">
+<li>From another device, wake the server (ref. <a href="https://wiki.archlinux.org/index.php/Wake-on-LAN#Trigger_a_wake_up">Arch Wiki</a>)</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">sudo pacman -S wol
+wol &lt;target_mac_address&gt;
+</code></pre></div><h2 id="references">References:<a href="#references" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Wake-on-LAN">https://wiki.archlinux.org/index.php/Wake-on-LAN</a></li>
+<li><a href="https://www.beachyuk.com/blog/get-wake-on-lan-working-on-linux-with-atheros-network-adaptor">https://www.beachyuk.com/blog/get-wake-on-lan-working-on-linux-with-atheros-network-adaptor</a></li>
+<li><a href="https://www.linode.com/docs/quick-answers/linux/start-service-at-boot/">https://www.linode.com/docs/quick-answers/linux/start-service-at-boot/</a></li>
+<li><a href="https://bugzilla.kernel.org/show_bug.cgi?id=61651">https://bugzilla.kernel.org/show_bug.cgi?id=61651</a></li>
+<li><a href="https://bugzilla.kernel.org/attachment.cgi?id=284877">patch</a></li>
+</ul>
+
+      </div></div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="https://fpkmatthi.xyz/posts/i1talent/">
+          <span class="button__text">i1Talent</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Matthias Van De Velde</span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://fpkmatthi.xyz/assets/main.js"></script>
+<script src="https://fpkmatthi.xyz/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+  
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

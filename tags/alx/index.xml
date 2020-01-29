@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alx on Matthias</title>
+    <link>https://fpkmatthi.xyz/tags/alx/</link>
+    <description>Recent content in alx on Matthias</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Matthias Van De Velde</copyright>
+    <lastBuildDate>Tue, 28 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fpkmatthi.xyz/tags/alx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Proxmox Wake-On-LAN - alx driver patch</title>
+      <link>https://fpkmatthi.xyz/posts/proxmox-wol/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/posts/proxmox-wol/</guid>
+      <description>At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found here
+ Download the patch  wget -O patch.tar.gz https://bugzilla.kernel.org/attachment.cgi?id=284877 Extract the archive  mkdir ./patch tar xvzf patch.tar.gz -C ./patch Add the PVE No-Subscription repo to the apt sources and install the current kernel headers  echo &amp;#34;deb http://download.</description>
+    </item>
+    
+  </channel>
+</rss>

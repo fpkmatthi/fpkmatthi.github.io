@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
   
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  
     <title>My ~/dotfile setup :: Matthias</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,6 +18,8 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
 <meta name="keywords" content=", "/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://fpkmatthi.xyz/posts/dotfiles/" />
+
+
 
 
 <link rel="stylesheet" href="https://fpkmatthi.xyz/assets/style.css">
@@ -155,15 +164,15 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
   <img src="https://fpkmatthi.xyz/img/desktop.png" class="post-cover" />
   
 
-  <div class="post-content">
-    <p>This method involves using a Bare Git repo. You can find the dotfiles for my daily driver <a href="https://github.com/fpkmatthi/dotfiles-ideapad">here</a></p>
-<h2 id="content">Content</h2>
+  <div class="post-content"><div>
+        <p>This method involves using a Bare Git repo. You can find the dotfiles for my daily driver <a href="https://github.com/fpkmatthi/dotfiles-ideapad">here</a></p>
+<h2 id="content">Content<a href="#content" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li><a href="#starting-a-new-repo">Starting a new repo</a></li>
 <li><a href="#deploying-dotfiles-on-a-new-system">Deploying dotfiles on a new system</a></li>
 <li><a href="#final-script">Final script</a></li>
 </ul>
-<h2 id="starting-a-new-repo">Starting a new repo</h2>
+<h2 id="starting-a-new-repo">Starting a new repo<a href="#starting-a-new-repo" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Create a bare repo and an alias for git to work in that repo.
 Hide untracked files in <code>config status</code>.
 Put the alias in your shell config (e.g. bashrc).
@@ -179,7 +188,7 @@ config commit -m <span style="color:#e6db74">&#34;Add vimrc&#34;</span>
 
 config remote add https://github.com/fpkmatthi/dotfiles-ideapad.git
 config push -u origin
-</code></pre></div><h2 id="deploying-dotfiles-on-a-new-system">Deploying dotfiles on a new system</h2>
+</code></pre></div><h2 id="deploying-dotfiles-on-a-new-system">Deploying dotfiles on a new system<a href="#deploying-dotfiles-on-a-new-system" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Configure the alias, let the source repo ignore the folder where it will be cloned and then clone the repo.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">alias config=&#39;/usr/bin/git --git-dir=</span>$HOME<span style="color:#e6db74">/.cfg/ --work-tree=</span>$HOME<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;</span> &gt;&gt; $HOME/.bashrc
 echo <span style="color:#e6db74">&#34;.cfg&#34;</span> &gt;&gt; .gitignore
@@ -201,7 +210,7 @@ Aborting
 config checkout
 </code></pre></div><p>Hide untracked files in <code>config status</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">config config --local status.showUntrackedFiles no
-</code></pre></div><h2 id="final-script">Final script</h2>
+</code></pre></div><h2 id="final-script">Final script<a href="#final-script" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash"><span style="color:#75715e">#!/usr/bin/env sh
 </span><span style="color:#75715e"></span><span style="color:#75715e"># deploy-dotfiles.sh</span>
 git clone --bare https://github.com/fpkmatthi/dotfiles-ideapad.git $HOME/.cfg
@@ -223,21 +232,21 @@ config checkout
 
 config checkout
 config config status.showUntrackedFiles no
-</code></pre></div><h2 id="post-deploy-steps">Post deploy steps</h2>
+</code></pre></div><h2 id="post-deploy-steps">Post deploy steps<a href="#post-deploy-steps" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ol>
 <li>Install the Hack font, located in ~/.config/hack</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cp -r ~/.config/hack /usr/share/fonts
 fc-cache -f -v
-</code></pre></div><h2 id="test-the-setup-on-a-container">Test the setup on a container</h2>
+</code></pre></div><h2 id="test-the-setup-on-a-container">Test the setup on a container<a href="#test-the-setup-on-a-container" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run -it -v $PWD:/src alpine /bin/sh /src/deploy-dotfiles.sh
 docker run -it -v $PWD:/src alpine /bin/ls
-</code></pre></div><h2 id="references">References</h2>
+</code></pre></div><h2 id="references">References<a href="#references" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li><a href="https://www.atlassian.com/git/tutorials/dotfiles">https://www.atlassian.com/git/tutorials/dotfiles</a></li>
 </ul>
 
-  </div>
+      </div></div>
   
   <div class="pagination">
     <div class="pagination__title">
@@ -246,6 +255,13 @@ docker run -it -v $PWD:/src alpine /bin/ls
       <hr />
     </div>
     <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="https://fpkmatthi.xyz/posts/i1talent/">
+          <span class="button__icon">←</span>
+          <span class="button__text">i1Talent</span>
+        </a>
+      </span>
       
       
       <span class="button next">
@@ -287,5 +303,10 @@ docker run -it -v $PWD:/src alpine /bin/ls
   
 </div>
 
+  
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

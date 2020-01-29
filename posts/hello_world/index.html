@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
   
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  
     <title>Setting up my website enviroment :: Matthias</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -13,6 +20,8 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
 <meta name="keywords" content="Hugo, Github Pages, Travis CI, Docker"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://fpkmatthi.xyz/posts/hello_world/" />
+
+
 
 
 <link rel="stylesheet" href="https://fpkmatthi.xyz/assets/style.css">
@@ -153,9 +162,9 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
   <img src="https://fpkmatthi.xyz/img/digi_world.jpg" class="post-cover" />
   
 
-  <div class="post-content">
-    <p>This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.</p>
-<h2 id="content">Content</h2>
+  <div class="post-content"><div>
+        <p>This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.</p>
+<h2 id="content">Content<a href="#content" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li><a href="#kick-off">Kick-off</a></li>
 <li><a href="#docker">Docker</a></li>
@@ -163,14 +172,14 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
 <li><a href="#link-github-pages">Linking Github Pages</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
 </ul>
-<h2 id="kick-off">Kick-off</h2>
+<h2 id="kick-off">Kick-off<a href="#kick-off" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Create and open a new project folder</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mkdir -p ~/portfolio
 cd ~/portfolio
-</code></pre></div><h2 id="docker">Docker</h2>
-<h3 id="install-docker-refer-to-the-arch-wikihttpswikiarchlinuxorgindexphpdockerinstallation-_ツ_-">Install docker (refer to the <a href="https://wiki.archlinux.org/index.php/Docker#Installation">Arch Wiki</a> ¯\<em>(ツ)</em>/¯ )</h3>
+</code></pre></div><h2 id="docker">Docker<a href="#docker" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="install-docker-refer-to-the-arch-wikihttpswikiarchlinuxorgindexphpdockerinstallation-_ツ_-">Install docker (refer to the <a href="https://wiki.archlinux.org/index.php/Docker#Installation">Arch Wiki</a> ¯\<em>(ツ)</em>/¯ )<a href="#install-docker-refer-to-the-arch-wikihttpswikiarchlinuxorgindexphpdockerinstallation-_ツ_-" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">sudo pacman -S docker
-</code></pre></div><h3 id="creating-docker-image">Creating docker image</h3>
+</code></pre></div><h3 id="creating-docker-image">Creating docker image<a href="#creating-docker-image" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>Alpine Linux is used as the base image</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine:latest</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
@@ -190,8 +199,8 @@ cd ~/portfolio
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 1313</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker build -t hugo_portfolio .
-</code></pre></div><h2 id="hugo">Hugo</h2>
-<h3 id="creating-a-new-site">Creating a new site</h3>
+</code></pre></div><h2 id="hugo">Hugo<a href="#hugo" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="creating-a-new-site">Creating a new site<a href="#creating-a-new-site" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>I use docker to host Hugo and create a website in the shared directory.
 The generated code inside the new directory is then used to build the website.
 To host our website on Github Pages, I&rsquo;ll need the build files to be on the <code>master</code> branch,
@@ -252,7 +261,7 @@ git push -u origin master
 </span><span style="color:#ae81ff"></span>    -u hugo hugo_portfolio hugo server <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -w <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --bind<span style="color:#f92672">=</span>0.0.0.0
-</code></pre></div><h3 id="linking-github-pages">Linking Github Pages</h3>
+</code></pre></div><h3 id="linking-github-pages">Linking Github Pages<a href="#linking-github-pages" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>Create a personal access token for Travis CI on github.
 Check the boxes for <code>public_repo</code>, <code>repo:status</code>, <code>repo_deployment</code>.</p>
 <p><img src="/img/github.png" alt="github settings"></p>
@@ -325,26 +334,26 @@ git push
 <p><img src="/img/build.png" alt="build status"></p>
 <p>Add a post</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run --rm -it -v $PWD:/src -u hugo hugo_portfolio hugo new posts/hello_world.md
-</code></pre></div><h3 id="some-jedi-mind-tricks">Some Jedi mind tricks</h3>
+</code></pre></div><h3 id="some-jedi-mind-tricks">Some Jedi mind tricks<a href="#some-jedi-mind-tricks" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>Create an alias in your shell config file (e.g. .bashrc).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">alias hugo-build<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -it -v $PWD:/src -u hugo hugo_portfolio hugo&#39;</span>
 alias hugo-server<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo hugo_portfolio hugo server --bind 0.0.0.0&#39;</span>
-</code></pre></div><h2 id="using-continuous-integration-to-ease-your-pain">Using Continuous Integration to ease your pain</h2>
+</code></pre></div><h2 id="using-continuous-integration-to-ease-your-pain">Using Continuous Integration to ease your pain<a href="#using-continuous-integration-to-ease-your-pain" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Travis CI is now triggerd to build your site when you push something on the <code>code</code> branch. These build files are then pushed to the master branch of the same repo.</p>
-<h2 id="problems-i-encountered">Problems I encountered</h2>
+<h2 id="problems-i-encountered">Problems I encountered<a href="#problems-i-encountered" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ol>
 <li>The page has no CSS when visiting it on github. When you open the developer console, there are a few errors like &ldquo;Blocked loading mixed active content&rdquo;</li>
 </ol>
 <ul>
 <li>Make sure the <code>baseurl</code> in the site config <strong>config.toml</strong> uses https (e.g. <a href="https://fpkmatthi.xyz/">https://fpkmatthi.xyz/</a>) if Github Pages is configured to use HTTPS as well.</li>
 </ul>
-<h2 id="references">References</h2>
+<h2 id="references">References<a href="#references" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li><a href="https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/">https://axdlog.com/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/</a></li>
 <li><a href="https://github.com/panr/hugo-theme-terminal">https://github.com/panr/hugo-theme-terminal</a></li>
 </ul>
 
-  </div>
+      </div></div>
   
   <div class="pagination">
     <div class="pagination__title">
@@ -394,5 +403,10 @@ alias hugo-server<span style="color:#f92672">=</span><span style="color:#e6db74"
   
 </div>
 
+  
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

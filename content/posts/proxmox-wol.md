@@ -7,7 +7,7 @@ tags = ["Proxmox", "alx", "WOL"]
 keywords = ["", ""]
 description = " "
 showFullContent = false
-draft = true
+draft = false
 +++
 
 At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found [here](https://bugzilla.kernel.org/show_bug.cgi?id=61651)

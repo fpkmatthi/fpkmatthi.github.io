@@ -56,5 +56,15 @@ mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wik
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0.</description>
     </item>
     
+    <item>
+      <title>About</title>
+      <link>https://fpkmatthi.xyz/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/about/</guid>
+      <description>I am Matthias Van De Velde, a  years old student at Ghent University College. I am currently in the final year of my bachelor education in Applied Computer Science. Earlier this year, I got the opporunity to attend a 3 day CISA bootcamp, organized by ISACA.
+After I have obtained my degree, I plan to persue the field of cyber security. Firstly, I&amp;rsquo;d go for certificates with more hands-on experience and later transfer to a more high-level view of the field.</description>
+    </item>
+    
   </channel>
 </rss>

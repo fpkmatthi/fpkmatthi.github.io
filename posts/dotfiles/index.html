@@ -73,7 +73,7 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
 <body class="">
 
 
-<div class="container center headings--one-size">
+<div class="container center">
 
   <header class="header">
   <div class="header__inner">
@@ -97,6 +97,10 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
         
       
         
+          <li><a href="/contact">Contact</a></li>
+        
+      
+        
           <li><a href="/posts">Posts</a></li>
         
       
@@ -110,6 +114,10 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
     
       
         <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact</a></li>
       
     
       
@@ -196,13 +204,13 @@ git clone --bare &lt;git-repo-url&gt; $HOME/.cfg
 alias config<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME&#39;</span>
 </code></pre></div><p>Checkout the actual content from the repo.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">config checkout
-</code></pre></div><p>If you receiver an error like this:</p>
-<pre><code>error: The following untracked working tree files would be overwritten by checkout:
+</code></pre></div><p>If you receive an error like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Text" data-lang="Text">error: The following untracked working tree files would be overwritten by checkout:
     .bashrc
     .gitignore
 Please move or remove them before you can switch branches.
 Aborting
-</code></pre><p>Backup the files that cause an error and checkout again.</p>
+</code></pre></div><p>Backup the files that cause an error and checkout again.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mkdir -p .config-backup <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>config checkout 2&gt;&amp;<span style="color:#ae81ff">1</span> | egrep <span style="color:#e6db74">&#34;\s+\.&#34;</span> | awk <span style="color:#f92672">{</span><span style="color:#e6db74">&#39;print $1&#39;</span><span style="color:#f92672">}</span> | <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>xargs -I<span style="color:#f92672">{</span><span style="color:#f92672">}</span> mv <span style="color:#f92672">{</span><span style="color:#f92672">}</span> .config-backup/<span style="color:#f92672">{</span><span style="color:#f92672">}</span>

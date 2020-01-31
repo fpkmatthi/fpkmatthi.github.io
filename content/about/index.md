@@ -5,7 +5,7 @@ draft: false
 
 ![self-portrait](/img/self-portrait.jpeg)
 
-I am Matthias Van De Velde, a <span id="age"></span> years old student at Ghent University College. I am currently in the final year of my bachelor education in Applied Computer Science. Earlier this year, I got the opporunity to attend a 3 day CISA bootcamp, organized by ISACA.
+I am Matthias Van De Velde, a <span id="age"></span> years old student at Ghent University College. I am currently in the final year of my bachelor education in Applied Computer Science. Earlier this year, I got the opportunity to attend a 3 day CISA bootcamp, organized by ISACA.
 
 After I have obtained my degree, I plan to persue the field of cyber security.
 Firstly, I'd go for certificates with more hands-on experience and later transfer to a more high-level view of the field.

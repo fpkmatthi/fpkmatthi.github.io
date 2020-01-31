@@ -60,9 +60,9 @@ Checkout the actual content from the repo.
 config checkout
 ```
 
-If you receiver an error like this: 
+If you receive an error like this: 
 
-```
+```Text
 error: The following untracked working tree files would be overwritten by checkout:
     .bashrc
     .gitignore

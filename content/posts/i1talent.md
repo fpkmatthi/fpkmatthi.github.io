@@ -1,6 +1,6 @@
 +++
 title = "i1Talent"
-date = "2020-01-27"
+date = "2018-06-01"
 author = "Matthias Van De Velde"
 cover = ""
 tags = ["HoGent", "iTalent"]

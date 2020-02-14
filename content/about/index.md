@@ -3,7 +3,7 @@ title: "About"
 draft: false
 ---
 
-![self-portrait](/img/self-portrait.jpeg)
+<img src="/img/self-portrait.jpeg" class="mb-5 rounded mx-auto d-block" alt="Self portrait">
 
 I am Matthias Van De Velde, a <span id="age"></span> years old student at Ghent University College. I am currently in the final year of my bachelor education in Applied Computer Science. Earlier this year, I got the opportunity to attend a 3 day CISA bootcamp, organized by ISACA.
 

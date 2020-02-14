@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-draft: true
+draft: false
 ---
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSeEgTJHEzDtge3urFNuxY36-OIsRHKEyeMPD48VSLrW4tnANA/formResponse" method="post">
@@ -19,9 +19,7 @@ How should I address you?
 
 How can I help you?
 
-TODO: resize this block
-
-<textarea class="form-control" id="contact-purpose" placeholder="Purpose" name="entry.564374202" aria-describedby="contact-purpose-error"></textarea>
+<textarea class="form-control" id="contact-purpose" placeholder="Purpose" name="entry.564374202" aria-describedby="contact-purpose-error" rows="7" style="resize: none"></textarea>
 
 <p id="contact-purpose-error" class="help-block"></p>
 

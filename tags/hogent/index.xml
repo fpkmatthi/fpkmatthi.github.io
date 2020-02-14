@@ -7,15 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Matthias Van De Velde</copyright>
-    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fpkmatthi.xyz/tags/hogent/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>i2Talent</title>
+      <link>https://fpkmatthi.xyz/posts/i2talent/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/posts/i2talent/</guid>
+      <description>Competence test </description>
+    </item>
+    
+    <item>
       <title>i1Talent</title>
       <link>https://fpkmatthi.xyz/posts/i1talent/</link>
-      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://fpkmatthi.xyz/posts/i1talent/</guid>
       <description>DISC test 

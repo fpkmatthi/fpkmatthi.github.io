@@ -23,18 +23,6 @@
     </item>
     
     <item>
-      <title>i1Talent</title>
-      <link>https://fpkmatthi.xyz/posts/i1talent/</link>
-      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fpkmatthi.xyz/posts/i1talent/</guid>
-      <description>DISC test 
-The DISC model consists out of 4 temperaments(Dominance, Influence, Conscientiousness, Stability) and charts ones preferences, strong sides, communication and growth opportunities.
-Perks of dominance:
- Loving competition and challenges. Goal-oriented and craves recognition for efforts. Aiming high, wants to call the shots and is generally inventive and ingenious. Mostly independent and individualistic.  Enneagram test The 2 types that stuck out the most were seller and perfectionist. According to the legend, these 2 types mean the following:</description>
-    </item>
-    
-    <item>
       <title>My ~/dotfile setup</title>
       <link>https://fpkmatthi.xyz/posts/dotfiles/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
@@ -54,6 +42,27 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
 Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
 mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki ¯\(ツ)/¯ ) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0.</description>
+    </item>
+    
+    <item>
+      <title>i2Talent</title>
+      <link>https://fpkmatthi.xyz/posts/i2talent/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/posts/i2talent/</guid>
+      <description>Competence test </description>
+    </item>
+    
+    <item>
+      <title>i1Talent</title>
+      <link>https://fpkmatthi.xyz/posts/i1talent/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/posts/i1talent/</guid>
+      <description>DISC test 
+The DISC model consists out of 4 temperaments(Dominance, Influence, Conscientiousness, Stability) and charts ones preferences, strong sides, communication and growth opportunities.
+Perks of dominance:
+ Loving competition and challenges. Goal-oriented and craves recognition for efforts. Aiming high, wants to call the shots and is generally inventive and ingenious. Mostly independent and individualistic.  Enneagram test The 2 types that stuck out the most were seller and perfectionist. According to the legend, these 2 types mean the following:</description>
     </item>
     
   </channel>

@@ -40,24 +40,6 @@
     </item>
     
     <item>
-      <title>HoGent</title>
-      <link>https://fpkmatthi.xyz/tags/hogent/</link>
-      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fpkmatthi.xyz/tags/hogent/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>iTalent</title>
-      <link>https://fpkmatthi.xyz/tags/italent/</link>
-      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fpkmatthi.xyz/tags/italent/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>bspwm</title>
       <link>https://fpkmatthi.xyz/tags/bspwm/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
@@ -117,6 +99,24 @@
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://fpkmatthi.xyz/tags/setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HoGent</title>
+      <link>https://fpkmatthi.xyz/tags/hogent/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/tags/hogent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iTalent</title>
+      <link>https://fpkmatthi.xyz/tags/italent/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/tags/italent/</guid>
       <description></description>
     </item>
     

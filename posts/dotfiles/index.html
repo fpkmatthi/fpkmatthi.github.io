@@ -141,13 +141,14 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
   <div class="post-meta">
       
     <span class="post-date">
-      2020-01-23
+      
+      23-01-2320
     </span>
     
     
-    <span class="post-author">::
-      Matthias Van De Velde
-    </span>
+    
+    
+    
     
   </div>
 
@@ -189,7 +190,7 @@ This way, you can use the alias when you open a new shell.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git init --bare $HOME/.cfg
 alias config<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME&#39;</span>
 config config --local status.showUntrackedFiles no
-echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">alias config=&#39;/usr/bin/git --git-dir=</span>$HOME<span style="color:#e6db74">/.cfg/ --work-tree=</span>$HOME<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;</span> &gt;&gt; $HOME/.bashrc
+echo <span style="color:#e6db74">&#34;alias config=&#39;/usr/bin/git --git-dir=</span>$HOME<span style="color:#e6db74">/.cfg/ --work-tree=</span>$HOME<span style="color:#e6db74">&#39;&#34;</span> &gt;&gt; $HOME/.bashrc
 </code></pre></div><p>An example on how to use it:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">config status
 config add .vimrc
@@ -199,7 +200,7 @@ config remote add https://github.com/fpkmatthi/dotfiles-ideapad.git
 config push -u origin
 </code></pre></div><h2 id="deploying-dotfiles-on-a-new-system">Deploying dotfiles on a new system<a href="#deploying-dotfiles-on-a-new-system" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Configure the alias, let the source repo ignore the folder where it will be cloned and then clone the repo.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">alias config=&#39;/usr/bin/git --git-dir=</span>$HOME<span style="color:#e6db74">/.cfg/ --work-tree=</span>$HOME<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;</span> &gt;&gt; $HOME/.bashrc
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">echo <span style="color:#e6db74">&#34;alias config=&#39;/usr/bin/git --git-dir=</span>$HOME<span style="color:#e6db74">/.cfg/ --work-tree=</span>$HOME<span style="color:#e6db74">&#39;&#34;</span> &gt;&gt; $HOME/.bashrc
 echo <span style="color:#e6db74">&#34;.cfg&#34;</span> &gt;&gt; .gitignore
 git clone --bare &lt;git-repo-url&gt; $HOME/.cfg
 alias config<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME&#39;</span>
@@ -214,7 +215,7 @@ Aborting
 </code></pre></div><p>Backup the files that cause an error and checkout again.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">mkdir -p .config-backup <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>config checkout 2&gt;&amp;<span style="color:#ae81ff">1</span> | egrep <span style="color:#e6db74">&#34;\s+\.&#34;</span> | awk <span style="color:#f92672">{</span><span style="color:#e6db74">&#39;print $1&#39;</span><span style="color:#f92672">}</span> | <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>xargs -I<span style="color:#f92672">{</span><span style="color:#f92672">}</span> mv <span style="color:#f92672">{</span><span style="color:#f92672">}</span> .config-backup/<span style="color:#f92672">{</span><span style="color:#f92672">}</span>
+</span><span style="color:#ae81ff"></span>xargs -I<span style="color:#f92672">{}</span> mv <span style="color:#f92672">{}</span> .config-backup/<span style="color:#f92672">{}</span>
 
 config checkout
 </code></pre></div><p>Hide untracked files in <code>config status</code>.</p>
@@ -224,7 +225,7 @@ config checkout
 </span><span style="color:#75715e"></span><span style="color:#75715e"># deploy-dotfiles.sh</span>
 git clone --bare https://github.com/fpkmatthi/dotfiles-ideapad.git $HOME/.cfg
 
-<span style="color:#66d9ef">function</span> config<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<span style="color:#66d9ef">function</span> config<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    /usr/bin/git --git-dir<span style="color:#f92672">=</span>$HOME/.cfg/ --work-tree<span style="color:#f92672">=</span>$HOME $@
 <span style="color:#f92672">}</span>
 
@@ -236,7 +237,7 @@ config checkout
   echo <span style="color:#e6db74">&#34;Checked out config.&#34;</span>
 <span style="color:#66d9ef">else</span>
     echo <span style="color:#e6db74">&#34;Backing up pre-existing dot files.&#34;</span>
-    config checkout 2&gt;&amp;<span style="color:#ae81ff">1</span> | egrep <span style="color:#e6db74">&#34;\s+\.&#34;</span> | awk <span style="color:#f92672">{</span><span style="color:#e6db74">&#39;print $1&#39;</span><span style="color:#f92672">}</span> | xargs -I<span style="color:#f92672">{</span><span style="color:#f92672">}</span> mv <span style="color:#f92672">{</span><span style="color:#f92672">}</span> .config-backup/<span style="color:#f92672">{</span><span style="color:#f92672">}</span>
+    config checkout 2&gt;&amp;<span style="color:#ae81ff">1</span> | egrep <span style="color:#e6db74">&#34;\s+\.&#34;</span> | awk <span style="color:#f92672">{</span><span style="color:#e6db74">&#39;print $1&#39;</span><span style="color:#f92672">}</span> | xargs -I<span style="color:#f92672">{}</span> mv <span style="color:#f92672">{}</span> .config-backup/<span style="color:#f92672">{}</span>
 <span style="color:#66d9ef">fi</span>
 
 config checkout

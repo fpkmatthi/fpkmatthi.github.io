@@ -147,13 +147,14 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
   <div class="post-meta">
       
     <span class="post-date">
-      2020-01-20
+      
+      20-01-2020
     </span>
     
     
-    <span class="post-author">::
-      Matthias Van De Velde
-    </span>
+    
+    
+    
     
   </div>
 
@@ -191,7 +192,7 @@ cd ~/portfolio
 </code></pre></div><h3 id="creating-docker-image">Creating docker image<a href="#creating-docker-image" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>Alpine Linux is used as the base image</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine:latest</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apk add --no-cache <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    curl <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    git <span style="color:#ae81ff">\
@@ -199,13 +200,13 @@ cd ~/portfolio
 </span><span style="color:#ae81ff"></span>    rsync <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    bash <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    hugo<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENV</span> VERSION<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>.62.2<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> addgroup -Sg <span style="color:#ae81ff">1000</span> hugo <span style="color:#f92672">&amp;&amp;</span> adduser -SG hugo -u <span style="color:#ae81ff">1000</span> -h /src hugo<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /src</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 1313</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker build -t hugo_portfolio .
 </code></pre></div><h2 id="hugo">Hugo<a href="#hugo" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
@@ -261,7 +262,7 @@ git add .
 git commit -m <span style="color:#e6db74">&#39;initial blog content&#39;</span>
 git push -u origin master
 
-<span style="color:#f92672">[</span><span style="color:#f92672">[</span> -d <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span><span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> rm -rf <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span>
+<span style="color:#f92672">[[</span> -d <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]]</span> <span style="color:#f92672">&amp;&amp;</span> rm -rf <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span>
 </code></pre></div><p>To serve the site locally, I&rsquo;ll use Docker.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run --rm <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -it <span style="color:#ae81ff">\
@@ -293,7 +294,7 @@ Check the boxes for <code>public_repo</code>, <code>repo:status</code>, <code>re
 </tr>
 <tr>
 <td align="left">GITHUB_EMAIL</td>
-<td align="right"><a href="mailto:fpkmatthi@fpkmatthi.me">fpkmatthi@fpkmatthi.me</a></td>
+<td align="right"><a href="mailto:matthias@fpkmatthi.xyz">matthias@fpkmatthi.xyz</a></td>
 </tr>
 </tbody>
 </table>

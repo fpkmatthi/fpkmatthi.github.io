@@ -156,7 +156,7 @@ Set the environment vars for the repo in Travis CI:
 | :---            | ---:                                     |
 | GITHUB_USERNAME | fpkmatthi                                |
 | GITHUB_TOKEN    | abcdefghijklmnopqrstuvwxyz0123456789abcd |
-| GITHUB_EMAIL    | fpkmatthi@fpkmatthi.me                   |
+| GITHUB_EMAIL    | matthias@fpkmatthi.xyz                   |
 
 ![travis repo settings](/img/travis.png)
 

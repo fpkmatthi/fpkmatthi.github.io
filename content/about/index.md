@@ -15,6 +15,8 @@ Besides my interests in cyber security, I am very passionate when it comes to le
 
 In my spare time I volunteer at the NPO Sisters of Saint Vincent de Paul of Opwijk, where I act as a 1st and 2nd line support for the residents.
 
-
+<button class="btn btn-outline-primary" style=" color: #23b0ff !important; border-color: #23b0ff !important;">
+<a href="/files/matthias.pdf" download><i class="far fa-file"></i> Get my resume</a>
+</button>
 
 <script src="/js/ageCalculator.js"></script>

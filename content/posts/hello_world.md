@@ -1,5 +1,5 @@
 +++
-title = "Setting up my website enviroment"
+title = "Setting up my website environment"
 date = "2020-01-20"
 author = "Matthias Van De Velde"
 cover = "img/digi_world.jpg"
@@ -100,7 +100,7 @@ git add .
 
 git commit -m "Add theme submodule"
 
-git remote add origin git@github.com:fpkmatthi/portfoli-hug-o.git
+git remote add origin git@github.com:fpkmatthi/fpkmatthi.github.io.git
 git push -u origin code
 ```
 
@@ -155,7 +155,7 @@ Set the environment vars for the repo in Travis CI:
 | var             | value                                    |
 | :---            | ---:                                     |
 | GITHUB_USERNAME | fpkmatthi                                |
-| GITHUB_TOKEN    | abcdefghijklmnopqrstuvwxyz0123456789abcd |
+| GITHUB_TOKEN    | abcdefghijklmnopqrstuvwxyz               |
 | GITHUB_EMAIL    | matthias@fpkmatthi.xyz                   |
 
 ![travis repo settings](/img/travis.png)

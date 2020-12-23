@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   
-    <title>Setting up my website enviroment :: Matthias</title>
+    <title>Setting up my website environment :: Matthias</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -41,7 +41,7 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Setting up my website enviroment :: Matthias — " />
+<meta name="twitter:title" content="Setting up my website environment :: Matthias — " />
 <meta name="twitter:description" content="This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
 Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
 mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki ¯\(ツ)/¯ ) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
@@ -53,13 +53,13 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Setting up my website enviroment :: Matthias — ">
+<meta property="og:title" content="Setting up my website environment :: Matthias — ">
 <meta property="og:description" content="This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
 Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
 mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki ¯\(ツ)/¯ ) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0." />
 <meta property="og:url" content="https://fpkmatthi.xyz/posts/hello_world/" />
-<meta property="og:site_name" content="Setting up my website enviroment" />
+<meta property="og:site_name" content="Setting up my website environment" />
 <meta property="og:image" content="https://fpkmatthi.xyz/img/digi_world.jpg">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
@@ -143,7 +143,7 @@ FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsyn
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://fpkmatthi.xyz/posts/hello_world/">Setting up my website enviroment</a></h1>
+    <a href="https://fpkmatthi.xyz/posts/hello_world/">Setting up my website environment</a></h1>
   <div class="post-meta">
       
     <span class="post-date">
@@ -238,7 +238,7 @@ git add .
 
 git commit -m <span style="color:#e6db74">&#34;Add theme submodule&#34;</span>
 
-git remote add origin git@github.com:fpkmatthi/portfoli-hug-o.git
+git remote add origin git@github.com:fpkmatthi/fpkmatthi.github.io.git
 git push -u origin code
 </code></pre></div><p>The <code>master</code> branch will contain <strong>only</strong> the build files.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">docker run --rm <span style="color:#ae81ff">\
@@ -279,22 +279,22 @@ Check the boxes for <code>public_repo</code>, <code>repo:status</code>, <code>re
 <table>
 <thead>
 <tr>
-<th align="left">var</th>
-<th align="right">value</th>
+<th style="text-align:left">var</th>
+<th style="text-align:right">value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">GITHUB_USERNAME</td>
-<td align="right">fpkmatthi</td>
+<td style="text-align:left">GITHUB_USERNAME</td>
+<td style="text-align:right">fpkmatthi</td>
 </tr>
 <tr>
-<td align="left">GITHUB_TOKEN</td>
-<td align="right">abcdefghijklmnopqrstuvwxyz0123456789abcd</td>
+<td style="text-align:left">GITHUB_TOKEN</td>
+<td style="text-align:right">abcdefghijklmnopqrstuvwxyz</td>
 </tr>
 <tr>
-<td align="left">GITHUB_EMAIL</td>
-<td align="right"><a href="mailto:matthias@fpkmatthi.xyz">matthias@fpkmatthi.xyz</a></td>
+<td style="text-align:left">GITHUB_EMAIL</td>
+<td style="text-align:right"><a href="mailto:matthias@fpkmatthi.xyz">matthias@fpkmatthi.xyz</a></td>
 </tr>
 </tbody>
 </table>
@@ -302,41 +302,41 @@ Check the boxes for <code>public_repo</code>, <code>repo:status</code>, <code>re
 <p>Activate the repo</p>
 <p>Push .travis.yml to the code branch.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git checkout code
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Yaml" data-lang="Yaml"><span style="color:#66d9ef">dist</span>: xenial
-<span style="color:#66d9ef">language</span>: python
-<span style="color:#66d9ef">python</span>:
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Yaml" data-lang="Yaml"><span style="color:#f92672">dist</span>: <span style="color:#ae81ff">xenial</span>
+<span style="color:#f92672">language</span>: <span style="color:#ae81ff">python</span>
+<span style="color:#f92672">python</span>:
   - <span style="color:#e6db74">&#34;3.7&#34;</span>
 
-<span style="color:#66d9ef">before_install</span>:
-  - sudo apt-get update -qq
-  - sudo apt-get -yq install apt-transport-https tor curl
+<span style="color:#f92672">before_install</span>:
+  - <span style="color:#ae81ff">sudo apt-get update -qq</span>
+  - <span style="color:#ae81ff">sudo apt-get -yq install apt-transport-https tor curl</span>
 
 <span style="color:#75715e"># install - install any dependencies required</span>
-<span style="color:#66d9ef">install</span>:
+<span style="color:#f92672">install</span>:
     <span style="color:#75715e"># Github may forbid request from travis container, so use tor proxy</span>
-    - sudo systemctl start tor
-    - download_command=<span style="color:#e6db74">&#39;curl -fsSL -x socks5h://127.0.0.1:9050&#39;</span> <span style="color:#75715e"># --socks5-hostname</span>
-    - $download_command -O $($download_command https://api.github.com/repos/gohugoio/hugo/releases/latest | sed -r -n <span style="color:#e6db74">&#39;/browser_download_url/{/Linux-64bit.deb/{s@[^:]*:[[:space:]]*&#34;([^&#34;]*)&#34;.*@\1@g;p;q}}&#39;</span>)
-    - sudo dpkg -i hugo<span style="color:#75715e">*.deb</span>
-    - rm -rf public <span style="color:#ae81ff">2</span>&gt; /dev/<span style="color:#66d9ef">null</span>
+    - <span style="color:#ae81ff">sudo systemctl start tor</span>
+    - <span style="color:#ae81ff">download_command=&#39;curl -fsSL -x socks5h://127.0.0.1:9050&#39;</span> <span style="color:#75715e"># --socks5-hostname</span>
+    - <span style="color:#ae81ff">$download_command -O $($download_command https://api.github.com/repos/gohugoio/hugo/releases/latest | sed -r -n &#39;/browser_download_url/{/Linux-64bit.deb/{s@[^:]*:[[:space:]]*&#34;([^&#34;]*)&#34;.*@\1@g;p;q}}&#39;)</span>
+    - <span style="color:#ae81ff">sudo dpkg -i hugo*.deb</span>
+    - <span style="color:#ae81ff">rm -rf public 2&gt; /dev/null</span>
 
 <span style="color:#75715e"># script - run the build script</span>
-<span style="color:#66d9ef">script</span>:
-    - hugo
-    - echo <span style="color:#e6db74">&#34;fpkmatthi.xyz&#34;</span> &gt; public/CNAME
+<span style="color:#f92672">script</span>:
+    - <span style="color:#ae81ff">hugo</span>
+    - <span style="color:#ae81ff">echo &#34;fpkmatthi.xyz&#34; &gt; public/CNAME</span>
 
-<span style="color:#66d9ef">deploy</span>:
-  <span style="color:#66d9ef">provider</span>: pages
-  <span style="color:#66d9ef">skip-cleanup</span>: <span style="color:#66d9ef">true</span>
-  <span style="color:#66d9ef">github-token</span>: $GITHUB_TOKEN  <span style="color:#75715e"># Set in travis-ci.org dashboard, marked secure</span>
-  <span style="color:#66d9ef">email</span>: $GITHUB_EMAIL
-  <span style="color:#66d9ef">name</span>: $GITHUB_USERNAME
-  <span style="color:#66d9ef">verbose</span>: <span style="color:#66d9ef">true</span>
-  <span style="color:#66d9ef">keep-history</span>: <span style="color:#66d9ef">true</span>
-  <span style="color:#66d9ef">local-dir</span>: public
-  <span style="color:#66d9ef">target_branch</span>: master  <span style="color:#75715e"># branch contains blog content</span>
-  <span style="color:#66d9ef">on</span>:
-    <span style="color:#66d9ef">branch</span>: code  <span style="color:#75715e"># branch contains Hugo generator code</span>
+<span style="color:#f92672">deploy</span>:
+  <span style="color:#f92672">provider</span>: <span style="color:#ae81ff">pages</span>
+  <span style="color:#f92672">skip-cleanup</span>: <span style="color:#66d9ef">true</span>
+  <span style="color:#f92672">github-token</span>: <span style="color:#ae81ff">$GITHUB_TOKEN </span> <span style="color:#75715e"># Set in travis-ci.org dashboard, marked secure</span>
+  <span style="color:#f92672">email</span>: <span style="color:#ae81ff">$GITHUB_EMAIL</span>
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">$GITHUB_USERNAME</span>
+  <span style="color:#f92672">verbose</span>: <span style="color:#66d9ef">true</span>
+  <span style="color:#f92672">keep-history</span>: <span style="color:#66d9ef">true</span>
+  <span style="color:#f92672">local-dir</span>: <span style="color:#ae81ff">public</span>
+  <span style="color:#f92672">target_branch</span>: <span style="color:#ae81ff">master </span> <span style="color:#75715e"># branch contains blog content</span>
+  <span style="color:#f92672">on</span>:
+    <span style="color:#f92672">branch</span>: <span style="color:#ae81ff">code </span> <span style="color:#75715e"># branch contains Hugo generator code</span>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git add .
 git commit -m <span style="color:#e6db74">&#34;Add travis.yml&#34;</span>
 git push

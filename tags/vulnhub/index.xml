@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Matthias Van De Velde</copyright>
-    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://fpkmatthi.xyz/tags/vulnhub/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fpkmatthi.xyz/tags/vulnhub/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vulnhub - Brainpan</title>
       <link>https://fpkmatthi.xyz/posts/brainpan/</link>

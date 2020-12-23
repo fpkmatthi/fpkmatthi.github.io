@@ -6,10 +6,6 @@
     <description>Recent content in Categories on Matthias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Matthias Van De Velde</copyright>
-    
-	<atom:link href="https://fpkmatthi.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>Matthias Van De Velde</copyright><atom:link href="https://fpkmatthi.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>x86 on Matthias</title>
-    <link>https://fpkmatthi.xyz/tags/x86/</link>
-    <description>Recent content in x86 on Matthias</description>
+    <title>Windows on Matthias</title>
+    <link>https://fpkmatthi.xyz/tags/windows/</link>
+    <description>Recent content in Windows on Matthias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Matthias Van De Velde</copyright>
-    <lastBuildDate>Sun, 20 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fpkmatthi.xyz/tags/x86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fpkmatthi.xyz/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>x86 Windows Remote Buffer Overflow Cheatsheet</title>
       <link>https://fpkmatthi.xyz/posts/x86winbofnetw/</link>
@@ -17,19 +17,6 @@
       <description>Template code
 Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run  Repeat after every crash  Linux VM Scan the victim IP
 nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on</description>
-    </item>
-    
-    <item>
-      <title>Vulnhub - Brainpan</title>
-      <link>https://fpkmatthi.xyz/posts/brainpan/</link>
-      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://fpkmatthi.xyz/posts/brainpan/</guid>
-      <description>Initial recon Nmap Host discovery Before we do any port scanning, we need to establish the exact host (Or it would take a lot longer to finish). To initiate a ping scan, we use the -sn flag.
-nmap -sn -oG nmap/host_discovery.txt 192.168.56.0/24
-Output:
-&amp;lt;snippet&amp;gt; Nmap scan report for 192.168.56.104 Host is up (0.00082s latency). Service enum Now we can launch a targeted port scan
-nmap -sC -sV -oG nmap/service_enum.txt -v 192.</description>
     </item>
     
   </channel>

@@ -4,26 +4,46 @@
   
   <url>
     <loc>https://fpkmatthi.xyz/tags/buffer-overflow/</loc>
-    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fpkmatthi.xyz/tags/linux/</loc>
-    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
+    <loc>https://fpkmatthi.xyz/tags/cheatsheet/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fpkmatthi.xyz/</loc>
-    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fpkmatthi.xyz/posts/</loc>
-    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fpkmatthi.xyz/tags/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/tags/windows/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/tags/x86/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/posts/x86winbofnetw/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fpkmatthi.xyz/tags/linux/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -34,11 +54,6 @@
   
   <url>
     <loc>https://fpkmatthi.xyz/posts/brainpan/</loc>
-    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fpkmatthi.xyz/tags/x86/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   

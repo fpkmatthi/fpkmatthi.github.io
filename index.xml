@@ -7,10 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Matthias Van De Velde</copyright>
-    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://fpkmatthi.xyz/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 20 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fpkmatthi.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>x86 Windows Remote Buffer Overflow Cheatsheet</title>
+      <link>https://fpkmatthi.xyz/posts/x86winbofnetw/</link>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fpkmatthi.xyz/posts/x86winbofnetw/</guid>
+      <description>Template code
+Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run  Repeat after every crash  Linux VM Scan the victim IP
+nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on</description>
+    </item>
     
     <item>
       <title>Vulnhub - Brainpan</title>
@@ -56,7 +63,7 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
     </item>
     
     <item>
-      <title>Setting up my website enviroment</title>
+      <title>Setting up my website environment</title>
       <link>https://fpkmatthi.xyz/posts/hello_world/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -94,8 +101,7 @@ Perks of dominance:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fpkmatthi.xyz/about/</guid>
-      <description>I am Matthias Van De Velde, a  years old student at Ghent University College. I am currently in the final year of my bachelor education in Applied Computer Science. Earlier this year, I got the opportunity to attend a 3 day CISA bootcamp, organized by ISACA.
-After I have obtained my degree, I plan to persue the field of cyber security. Firstly, I&amp;rsquo;d go for certificates with more hands-on experience and later transfer to a more high-level view of the field.</description>
+      <description> yo | Linux 🐧 | Infosec 🛡️ | Automation ⚙️ | Toreonite | LinkedIn   Bachelor Applied CompSci Studying for OSCP Got the privilege to attend a CISA bootcamp, sponsored by ISACA Always looking to learn new things 📚 DnD (rogue/paladin) In my spare time I volunteer at cloister where I help seniors use modern technology   Get my resume  --  </description>
     </item>
     
     <item>

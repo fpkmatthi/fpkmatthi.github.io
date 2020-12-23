@@ -5,18 +5,23 @@ draft: false
 
 <img src="/img/self-portrait.jpeg" class="mb-5 rounded mx-auto d-block" alt="Self portrait">
 
-I am Matthias Van De Velde, a <span id="age"></span> years old student at Ghent University College. I am currently in the final year of my bachelor education in Applied Computer Science. Earlier this year, I got the opportunity to attend a 3 day CISA bootcamp, organized by ISACA.
+<div class="text-center">
+<span id="age"></span> yo | Linux 🐧 | Infosec 🛡️ | Automation ⚙️ | <a href=https://toreon.com><u>Toreonite</u></a> | <a href=https://www.linkedin.com/in/matthias-vdv/><u>LinkedIn</u></u></a>
+</div>
 
-After I have obtained my degree, I plan to persue the field of cyber security.
-Firstly, I'd go for certificates with more hands-on experience and later transfer to a more high-level view of the field.
-I've got my eye on certificates from SANS and ISACA.
+<br>
 
-Besides my interests in cyber security, I am very passionate when it comes to learning new things. Whenever I get the chance, I work on improving my skills and broadening my knowledge.
+- Bachelor Applied CompSci
+- Studying for OSCP
+- Got the privilege to attend a CISA bootcamp, sponsored by ISACA
+- Always looking to learn new things 📚
+- DnD (rogue/paladin)
+- In my spare time I volunteer at cloister where I help seniors use modern technology
 
-In my spare time I volunteer at the NPO Sisters of Saint Vincent de Paul of Opwijk, where I act as a 1st and 2nd line support for the residents.
-
+<!--
 <button class="btn btn-outline-primary" style=" color: #23b0ff !important; border-color: #23b0ff !important;">
 <a href="/files/matthias.pdf" download><i class="far fa-file"></i> Get my resume</a>
 </button>
+-->
 
 <script src="/js/ageCalculator.js"></script>

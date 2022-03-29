@@ -1,8 +1,7 @@
 name: CI
 on:
   push:
-    branches:
-      - 'code'
+    branches: code
 
 jobs:
   deploy:
@@ -11,7 +10,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
 
-        # (Optional)If you have the theme added as submodule, you can pull it and use the most updated version
+      # (Optional)If you have the theme added as submodule, you can pull it and use the most updated version
       # - name: Update theme
       #   run: git submodule update --init --recursive
 
@@ -29,8 +28,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.TOKEN }}
-          external_repository: fpkmatthi.github.io
-          publish_dir: ./
+          external_repository: fpkmatthi/fpkmatthi.github.io
+          publish_dir: ./public
           #   keep_files: true
           user_name: fpkmatthi
           user_email: skymatth@gmail.com

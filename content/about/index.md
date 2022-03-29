@@ -12,12 +12,13 @@ draft: false
 <br>
 
 - Bachelor Applied CompSci
-- Studying for OSCP
 - Always looking to learn new things 📚
 - DnD (rogue/paladin)
-- In my spare time I volunteer at cloister where I help seniors use modern technology
+- In my spare time I volunteer to help seniors use modern technology
 
+<span class="d-flex justify-content-center">
 <script src='https://www.hackthebox.com/badge/209551'></script>
+</span>
 
 
 <!--

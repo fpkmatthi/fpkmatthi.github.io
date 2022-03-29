@@ -2,18 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>x86 on Matthias</title>
-    <link>https://fpkmatthi.xyz/tags/x86/</link>
+    <link>https://me.fpkmatthi.xyz/tags/x86/</link>
     <description>Recent content in x86 on Matthias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Matthias Van De Velde</copyright>
-    <lastBuildDate>Sun, 20 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fpkmatthi.xyz/tags/x86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://me.fpkmatthi.xyz/tags/x86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>x86 Windows Remote Buffer Overflow Cheatsheet</title>
-      <link>https://fpkmatthi.xyz/posts/x86winbofnetw/</link>
+      <link>https://me.fpkmatthi.xyz/posts/x86winbofnetw/</link>
       <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fpkmatthi.xyz/posts/x86winbofnetw/</guid>
+      <guid>https://me.fpkmatthi.xyz/posts/x86winbofnetw/</guid>
       <description>Template code
 Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run  Repeat after every crash  Linux VM Scan the victim IP
 nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on</description>
@@ -21,10 +25,10 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on</descri
     
     <item>
       <title>Vulnhub - Brainpan</title>
-      <link>https://fpkmatthi.xyz/posts/brainpan/</link>
+      <link>https://me.fpkmatthi.xyz/posts/brainpan/</link>
       <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fpkmatthi.xyz/posts/brainpan/</guid>
+      <guid>https://me.fpkmatthi.xyz/posts/brainpan/</guid>
       <description>Initial recon Nmap Host discovery Before we do any port scanning, we need to establish the exact host (Or it would take a lot longer to finish). To initiate a ping scan, we use the -sn flag.
 nmap -sn -oG nmap/host_discovery.txt 192.168.56.0/24
 Output:

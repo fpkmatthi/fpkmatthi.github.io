@@ -2,18 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>setup on Matthias</title>
-    <link>https://fpkmatthi.xyz/tags/setup/</link>
+    <link>https://me.fpkmatthi.xyz/tags/setup/</link>
     <description>Recent content in setup on Matthias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Matthias Van De Velde</copyright>
-    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fpkmatthi.xyz/tags/setup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://me.fpkmatthi.xyz/tags/setup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Setting up my website environment</title>
-      <link>https://fpkmatthi.xyz/posts/hello_world/</link>
+      <link>https://me.fpkmatthi.xyz/posts/hello_world/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fpkmatthi.xyz/posts/hello_world/</guid>
+      <guid>https://me.fpkmatthi.xyz/posts/hello_world/</guid>
       <description>This write-up is about how I set up my repo, travis ci and docker container to work on my portfolio.
 Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
 mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki ¯\(ツ)/¯ ) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image

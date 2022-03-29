@@ -2,18 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vulnhub on Matthias</title>
-    <link>https://fpkmatthi.xyz/tags/vulnhub/</link>
+    <link>https://me.fpkmatthi.xyz/tags/vulnhub/</link>
     <description>Recent content in Vulnhub on Matthias</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Matthias Van De Velde</copyright>
-    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fpkmatthi.xyz/tags/vulnhub/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://me.fpkmatthi.xyz/tags/vulnhub/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Vulnhub - Brainpan</title>
-      <link>https://fpkmatthi.xyz/posts/brainpan/</link>
+      <link>https://me.fpkmatthi.xyz/posts/brainpan/</link>
       <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://fpkmatthi.xyz/posts/brainpan/</guid>
+      <guid>https://me.fpkmatthi.xyz/posts/brainpan/</guid>
       <description>Initial recon Nmap Host discovery Before we do any port scanning, we need to establish the exact host (Or it would take a lot longer to finish). To initiate a ping scan, we use the -sn flag.
 nmap -sn -oG nmap/host_discovery.txt 192.168.56.0/24
 Output:

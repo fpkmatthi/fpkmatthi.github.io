@@ -3,7 +3,8 @@ title: "About"
 draft: false
 ---
 
-<img src="/img/self-portrait.jpeg" class="mb-5 rounded mx-auto d-block" alt="Self portrait">
+<img src="/img/self-portrait.jpeg" class="mb-5 rounded mx-auto d-block img-fluid" alt="Self portrait" style="width: auto; height: 195px;">
+
 
 <div class="text-center">
 <span id="age"></span> yo | Linux 🐧 | Infosec 🛡️ | Automation ⚙️ | <a href=https://www.linkedin.com/in/matthias-vdv/><u>LinkedIn</u></u></a>
@@ -12,6 +13,7 @@ draft: false
 <br>
 
 - Bachelor Applied CompSci
+- OSCP, CRTE, CARTP (see <a href=https://www.linkedin.com/in/matthias-vdv/><u>LinkedIn</u></u></a> for more)
 - Always looking to learn new things 📚
 - DnD (rogue/paladin)
 - In my spare time I volunteer to help seniors use modern technology
@@ -19,7 +21,6 @@ draft: false
 <span class="d-flex justify-content-center">
 <script src='https://www.hackthebox.com/badge/209551'></script>
 </span>
-
 
 <!--
 <button class="btn btn-outline-primary" style=" color: #23b0ff !important; border-color: #23b0ff !important;">

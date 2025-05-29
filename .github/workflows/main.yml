@@ -1,7 +1,8 @@
 name: CI
 on:
   push:
-    branches: code
+    branches:
+      - code
 
 jobs:
   deploy:
@@ -27,11 +28,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.TOKEN }}
-          external_repository: fpkmatthi/fpkmatthi.github.io
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          #   keep_files: true
-          user_name: fpkmatthi
-          user_email: skymatth@gmail.com
           publish_branch: master
           cname: me.fpkmatthi.xyz

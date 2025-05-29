@@ -7,7 +7,7 @@ tags = ["HoGent", "iTalent"]
 keywords = ["", ""]
 description = "The results of various personal development tests, taken throughout the course i3Talent."
 showFullContent = false
-draft = false
+draft = true
 +++
 
 ## Ofman quadrants

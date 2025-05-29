@@ -10,7 +10,10 @@ showFullContent = false
 draft = false
 +++
 
-At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found [here](https://bugzilla.kernel.org/show_bug.cgi?id=61651)
+At home, I use my old computer as a Proxmox server. To start my server from
+another computer in the same LAN or from a different LAN, I use Wake-on-LAN.
+Unfortunately, the alx driver is disabled by default since it breaks for some
+kernels. The bugtrack can be found [here](https://bugzilla.kernel.org/show_bug.cgi?id=61651)
 
 1. Download the patch
 
@@ -95,10 +98,10 @@ sudo pacman -S wol
 wol <target_mac_address>
 ```
 
-## References:
+## References
 
-* https://wiki.archlinux.org/index.php/Wake-on-LAN
-* https://www.beachyuk.com/blog/get-wake-on-lan-working-on-linux-with-atheros-network-adaptor
-* https://www.linode.com/docs/quick-answers/linux/start-service-at-boot/
-* https://bugzilla.kernel.org/show_bug.cgi?id=61651
+* <https://wiki.archlinux.org/index.php/Wake-on-LAN>
+* <https://www.beachyuk.com/blog/get-wake-on-lan-working-on-linux-with-atheros-network-adaptor>
+* <https://www.linode.com/docs/quick-answers/linux/start-service-at-boot/>
+* <https://bugzilla.kernel.org/show_bug.cgi?id=61651>
 * [patch](https://bugzilla.kernel.org/attachment.cgi?id=284877)

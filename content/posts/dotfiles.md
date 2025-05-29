@@ -10,14 +10,14 @@ showFullContent = false
 draft = false
 +++
 
-This method involves using a Bare Git repo. You can find the dotfiles for my daily driver [here](https://github.com/fpkmatthi/dotfiles-ideapad)
+This method involves using a Bare Git repo. You can find the dotfiles for my
+daily driver [here](https://github.com/fpkmatthi/dotfiles-ideapad)
 
 ## Content
 
 * [Starting a new repo](#starting-a-new-repo)
 * [Deploying dotfiles on a new system](#deploying-dotfiles-on-a-new-system)
 * [Final script](#final-script)
-
 
 ## Starting a new repo
 
@@ -46,7 +46,9 @@ config push -u origin
 
 ## Deploying dotfiles on a new system
 
-Configure the alias, let the source repo ignore the folder where it will be cloned and then clone the repo.
+Configure the alias, let the source repo ignore the folder where
+it will be cloned and then clone the repo.
+
 ```Bash
 echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
 echo ".cfg" >> .gitignore
@@ -60,7 +62,7 @@ Checkout the actual content from the repo.
 config checkout
 ```
 
-If you receive an error like this: 
+If you receive an error like this:
 
 ```Text
 error: The following untracked working tree files would be overwritten by checkout:
@@ -130,5 +132,4 @@ docker run -it -v $PWD:/src alpine /bin/ls
 
 ## References
 
-* https://www.atlassian.com/git/tutorials/dotfiles
-
+* <https://www.atlassian.com/git/tutorials/dotfiles>

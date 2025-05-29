@@ -3,23 +3,23 @@ title: "About"
 draft: false
 ---
 
-<img src="/img/self-portrait.jpeg" class="mb-5 rounded mx-auto d-block img-fluid" alt="Self portrait" style="width: auto; height: 195px;">
-
+<img src="/img/profile.png" class="mb-5 rounded mx-auto d-block img-fluid" alt="Self portrait" style="width: auto; height: 295px;">
 
 <div class="text-center">
-<span id="age"></span> yo | Linux 🐧 | Infosec 🛡️ | Automation ⚙️ | <a href=https://www.linkedin.com/in/matthias-vdv/><u>LinkedIn</u></u></a>
+<span id="age"></span> yo | Linux 🐧 | Cyber 🛡️ | Automation ⚙️ | <a href=https://www.linkedin.com/in/matthias-vdv/><u>LinkedIn</u></u></a>
 </div>
 
 <br>
 
 - Bachelor Applied CompSci
-- OSCP, CRTE, CARTP (see <a href=https://www.linkedin.com/in/matthias-vdv/><u>LinkedIn</u></u></a> for more)
-- Always looking to learn new things 📚
+- OSCP, CRTE, CARTP, CRTO
 - DnD (rogue/paladin)
-- In my spare time I volunteer to help seniors use modern technology
+- Speedcubing (sub-15)
 
 <span class="d-flex justify-content-center">
-<script src='https://www.hackthebox.com/badge/209551'></script>
+
+[![fpkmatthi](https://www.hackthebox.eu/badge/image/209551)](https://www.hackthebox.eu/home/users/profile/209551)
+
 </span>
 
 <!--

@@ -1,61 +1,63 @@
 baseurl = "https://me.fpkmatthi.xyz"
 languageCode = "en-us"
 theme = "terminal"
-paginate = 5
+
+[pagination]
+pagerSize = 5
 
 [params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+# dir name of your blog content (default is `content/posts`)
+contentTypeName = "posts"
 
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "blue"
+# ["orange", "blue", "red", "green", "pink"]
+themeColor = "blue"
 
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 3
+# if you set this to 0, only submenu trigger will be visible
+showMenuItems = 3
 
-  # show selector to switch language
-  showLanguageSelector = false
+# show selector to switch language
+showLanguageSelector = false
 
-  # set theme to full screen width
-  fullWidthTheme = false
+# set theme to full screen width
+fullWidthTheme = false
 
-  # center theme with default width
-  centerTheme = true
+# center theme with default width
+centerTheme = true
 
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
+# set a custom favicon (default is a `themeColor` square)
+# favicon = "favicon.ico"
 
-  # set all headings to their default size (depending on browser settings)
-  # it's set to `true` by default
-  oneHeadingSize = false
+# set all headings to their default size (depending on browser settings)
+# it's set to `true` by default
+oneHeadingSize = false
 
 [languages]
-  [languages.en]
-    languageName = "English"
-    title = "Matthias"
-    keywords = ""
-    copyright = "Matthias Van De Velde"
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
+[languages.en]
+languageName = "English"
+title = "fpkmatthi"
+keywords = ""
+copyright = "fpkmatthi"
+menuMore = "Show more"
+readMore = "Read more"
+readOtherPosts = "Read other posts"
 
-    [languages.en.params.logo]
-      logoText = "Matthias Van De Velde"
-      logoHomeLink = "/"
+[languages.en.params.logo]
+logoText = "fpkmatthi"
+logoHomeLink = "/"
 
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts"
-      # [[languages.en.menu.main]]
-      #   identifier = "contact"
-      #   name = "Contact"
-      #   url = "/contact"
+[languages.en.menu]
+[[languages.en.menu.main]]
+identifier = "about"
+name = "About"
+url = "/about"
+[[languages.en.menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts"
+# [[languages.en.menu.main]]
+#   identifier = "contact"
+#   name = "Contact"
+#   url = "/contact"
 
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true

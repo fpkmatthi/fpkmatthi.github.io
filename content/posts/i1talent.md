@@ -7,7 +7,7 @@ tags = ["HoGent", "iTalent"]
 keywords = ["", ""]
 description = "The results of various personal development tests, taken throughout the course i1Talent."
 showFullContent = false
-draft = false
+draft = true
 +++
 
 ## DISC test

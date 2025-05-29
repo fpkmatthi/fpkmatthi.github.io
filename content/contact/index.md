@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-draft: false
+draft: true
 ---
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSeEgTJHEzDtge3urFNuxY36-OIsRHKEyeMPD48VSLrW4tnANA/formResponse" method="post">
@@ -26,6 +26,3 @@ How can I help you?
 <button type="submit" class="btn btn-default btn-warning" id="contact-form-submit">Submit</button>
 
 </form>
-
-
-

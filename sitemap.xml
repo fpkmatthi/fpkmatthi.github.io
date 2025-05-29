@@ -3,27 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://me.fpkmatthi.xyz/tags/arch/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://me.fpkmatthi.xyz/posts/arch-dp/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://me.fpkmatthi.xyz/tags/displaylink/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://me.fpkmatthi.xyz/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://me.fpkmatthi.xyz/posts/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://me.fpkmatthi.xyz/tags/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://me.fpkmatthi.xyz/tags/buffer-overflow/</loc>
     <lastmod>2020-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://me.fpkmatthi.xyz/tags/cheatsheet/</loc>
-    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://me.fpkmatthi.xyz/</loc>
-    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://me.fpkmatthi.xyz/posts/</loc>
-    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://me.fpkmatthi.xyz/tags/</loc>
     <lastmod>2020-12-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -55,21 +70,6 @@
   <url>
     <loc>https://me.fpkmatthi.xyz/posts/brainpan/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://me.fpkmatthi.xyz/tags/hogent/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://me.fpkmatthi.xyz/posts/i3talent/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://me.fpkmatthi.xyz/tags/italent/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -138,25 +138,11 @@
   </url>
   
   <url>
-    <loc>https://me.fpkmatthi.xyz/posts/i2talent/</loc>
-    <lastmod>2019-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://me.fpkmatthi.xyz/posts/i1talent/</loc>
-    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://me.fpkmatthi.xyz/about/</loc>
   </url>
   
   <url>
     <loc>https://me.fpkmatthi.xyz/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://me.fpkmatthi.xyz/contact/</loc>
   </url>
   
 </urlset>

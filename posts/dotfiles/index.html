@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   
-    <title>My ~/dotfile setup :: Matthias</title>
+    <title>My ~/dotfile setup :: fpkmatthi</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -39,7 +39,7 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="My ~/dotfile setup :: Matthias — " />
+<meta name="twitter:title" content="My ~/dotfile setup :: fpkmatthi — " />
 <meta name="twitter:description" content="This method involves using a Bare Git repo. You can find the dotfiles for my daily driver here
 Content  Starting a new repo Deploying dotfiles on a new system Final script  Starting a new repo Create a bare repo and an alias for git to work in that repo. Hide untracked files in config status. Put the alias in your shell config (e.g. bashrc). This way, you can use the alias when you open a new shell." />
 <meta name="twitter:site" content="https://me.fpkmatthi.xyz" />
@@ -49,7 +49,7 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="My ~/dotfile setup :: Matthias — ">
+<meta property="og:title" content="My ~/dotfile setup :: fpkmatthi — ">
 <meta property="og:description" content="This method involves using a Bare Git repo. You can find the dotfiles for my daily driver here
 Content  Starting a new repo Deploying dotfiles on a new system Final script  Starting a new repo Create a bare repo and an alias for git to work in that repo. Hide untracked files in config status. Put the alias in your shell config (e.g. bashrc). This way, you can use the alias when you open a new shell." />
 <meta property="og:url" content="https://me.fpkmatthi.xyz/posts/dotfiles/" />
@@ -81,7 +81,7 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
     <div class="header__logo">
       <a href="/">
   <div class="logo">
-    Matthias Van De Velde
+    fpkmatthi
   </div>
 </a>
 
@@ -167,7 +167,8 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
   
 
   <div class="post-content"><div>
-        <p>This method involves using a Bare Git repo. You can find the dotfiles for my daily driver <a href="https://github.com/fpkmatthi/dotfiles-ideapad">here</a></p>
+        <p>This method involves using a Bare Git repo. You can find the dotfiles for my
+daily driver <a href="https://github.com/fpkmatthi/dotfiles-ideapad">here</a></p>
 <h2 id="content">Content<a href="#content" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li><a href="#starting-a-new-repo">Starting a new repo</a></li>
@@ -191,7 +192,8 @@ config commit -m <span style="color:#e6db74">&#34;Add vimrc&#34;</span>
 config remote add https://github.com/fpkmatthi/dotfiles-ideapad.git
 config push -u origin
 </code></pre></div><h2 id="deploying-dotfiles-on-a-new-system">Deploying dotfiles on a new system<a href="#deploying-dotfiles-on-a-new-system" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Configure the alias, let the source repo ignore the folder where it will be cloned and then clone the repo.</p>
+<p>Configure the alias, let the source repo ignore the folder where
+it will be cloned and then clone the repo.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">alias config=&#39;/usr/bin/git --git-dir=</span>$HOME<span style="color:#e6db74">/.cfg/ --work-tree=</span>$HOME<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#34;</span> &gt;&gt; $HOME/.bashrc
 echo <span style="color:#e6db74">&#34;.cfg&#34;</span> &gt;&gt; .gitignore
 git clone --bare &lt;git-repo-url&gt; $HOME/.cfg
@@ -288,7 +290,7 @@ docker run -it -v $PWD:/src alpine /bin/ls
   <div class="footer__inner">
     
       <div class="copyright copyright--user">
-        <span>© Matthias Van De Velde</span>
+        <span>© fpkmatthi</span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>
@@ -306,9 +308,6 @@ docker run -it -v $PWD:/src alpine /bin/ls
 <footer class="container-fluid text-center text-white mt-4 pt-4 pb-3">
     <a href="https://github.com/fpkmatthi" alt="link to github account">
         <i class="mr-3 fab fa-github fa-2x" aria-hidden="true"></i>
-    </a>
-    <a href="/contact/index.html" alt="link to contact page">
-        <i class="mr-3 fas fa-envelope fa-2x" aria-hidden="true"></i>
     </a>
     <a href="https://www.linkedin.com/in/matthias-vdv" alt="link to LinkedIn account">
         <i class="fab fa-linkedin-in fa-2x" aria-hidden="true"></i>

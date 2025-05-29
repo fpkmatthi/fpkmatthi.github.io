@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dotfiles on Matthias</title>
+    <title>dotfiles on fpkmatthi</title>
     <link>https://me.fpkmatthi.xyz/tags/dotfiles/</link>
-    <description>Recent content in dotfiles on Matthias</description>
+    <description>Recent content in dotfiles on fpkmatthi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Matthias Van De Velde</copyright>
+    <copyright>fpkmatthi</copyright>
     <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://me.fpkmatthi.xyz/tags/dotfiles/index.xml" rel="self" type="application/rss+xml" />

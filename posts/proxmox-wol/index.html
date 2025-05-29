@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   
-    <title>Proxmox Wake-On-LAN - alx driver patch :: Matthias</title>
+    <title>Proxmox Wake-On-LAN - alx driver patch :: fpkmatthi</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -39,7 +39,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Proxmox Wake-On-LAN - alx driver patch :: Matthias — " />
+<meta name="twitter:title" content="Proxmox Wake-On-LAN - alx driver patch :: fpkmatthi — " />
 <meta name="twitter:description" content="At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found here
  Download the patch  wget -O patch.tar.gz https://bugzilla.kernel.org/attachment.cgi?id=284877 Extract the archive  mkdir ./patch tar xvzf patch.tar.gz -C ./patch Add the PVE No-Subscription repo to the apt sources and install the current kernel headers  echo &amp;#34;deb http://download." />
 <meta name="twitter:site" content="https://me.fpkmatthi.xyz" />
@@ -49,7 +49,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Proxmox Wake-On-LAN - alx driver patch :: Matthias — ">
+<meta property="og:title" content="Proxmox Wake-On-LAN - alx driver patch :: fpkmatthi — ">
 <meta property="og:description" content="At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found here
  Download the patch  wget -O patch.tar.gz https://bugzilla.kernel.org/attachment.cgi?id=284877 Extract the archive  mkdir ./patch tar xvzf patch.tar.gz -C ./patch Add the PVE No-Subscription repo to the apt sources and install the current kernel headers  echo &amp;#34;deb http://download." />
 <meta property="og:url" content="https://me.fpkmatthi.xyz/posts/proxmox-wol/" />
@@ -81,7 +81,7 @@
     <div class="header__logo">
       <a href="/">
   <div class="logo">
-    Matthias Van De Velde
+    fpkmatthi
   </div>
 </a>
 
@@ -161,7 +161,10 @@
   
 
   <div class="post-content"><div>
-        <p>At home, I use my old computer as a Proxmox server. To start my server from another computer in the same LAN or from a different LAN, I use Wake-on-LAN. Unfortunately, the alx driver is disabled by default since it breaks for some kernels. The bugtrack can be found <a href="https://bugzilla.kernel.org/show_bug.cgi?id=61651">here</a></p>
+        <p>At home, I use my old computer as a Proxmox server. To start my server from
+another computer in the same LAN or from a different LAN, I use Wake-on-LAN.
+Unfortunately, the alx driver is disabled by default since it breaks for some
+kernels. The bugtrack can be found <a href="https://bugzilla.kernel.org/show_bug.cgi?id=61651">here</a></p>
 <ol>
 <li>Download the patch</li>
 </ol>
@@ -223,7 +226,7 @@ systemctl enable fix-int.service
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">sudo pacman -S wol
 wol &lt;target_mac_address&gt;
-</code></pre></div><h2 id="references">References:<a href="#references" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+</code></pre></div><h2 id="references">References<a href="#references" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li><a href="https://wiki.archlinux.org/index.php/Wake-on-LAN">https://wiki.archlinux.org/index.php/Wake-on-LAN</a></li>
 <li><a href="https://www.beachyuk.com/blog/get-wake-on-lan-working-on-linux-with-atheros-network-adaptor">https://www.beachyuk.com/blog/get-wake-on-lan-working-on-linux-with-atheros-network-adaptor</a></li>
@@ -243,9 +246,9 @@ wol &lt;target_mac_address&gt;
     <div class="pagination__buttons">
       
       <span class="button previous">
-        <a href="https://me.fpkmatthi.xyz/posts/i3talent/">
+        <a href="https://me.fpkmatthi.xyz/posts/brainpan/">
           <span class="button__icon">←</span>
-          <span class="button__text">i3Talent</span>
+          <span class="button__text">Vulnhub - Brainpan</span>
         </a>
       </span>
       
@@ -272,7 +275,7 @@ wol &lt;target_mac_address&gt;
   <div class="footer__inner">
     
       <div class="copyright copyright--user">
-        <span>© Matthias Van De Velde</span>
+        <span>© fpkmatthi</span>
     
         <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
       </div>
@@ -290,9 +293,6 @@ wol &lt;target_mac_address&gt;
 <footer class="container-fluid text-center text-white mt-4 pt-4 pb-3">
     <a href="https://github.com/fpkmatthi" alt="link to github account">
         <i class="mr-3 fab fa-github fa-2x" aria-hidden="true"></i>
-    </a>
-    <a href="/contact/index.html" alt="link to contact page">
-        <i class="mr-3 fas fa-envelope fa-2x" aria-hidden="true"></i>
     </a>
     <a href="https://www.linkedin.com/in/matthias-vdv" alt="link to LinkedIn account">
         <i class="fab fa-linkedin-in fa-2x" aria-hidden="true"></i>

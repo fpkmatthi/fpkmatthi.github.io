@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  
+    <title>Arch DisplayLink :: fpkmatthi</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="I am using a Lenovo USB-C / USB-A docking station and it has DisplayPorts, which means it loads DisplayLink when connecting to Linux.
+Follow the Arch wiki to install the right packages (section 1.2)
+Arch Wiki DisplayLink
+When you have to create the following file:
+/etc/X11/xorg.conf.d/20-evdi.conf Section &amp;#34;OutputClass&amp;#34; Identifier &amp;#34;DisplayLink&amp;#34; MatchDriver &amp;#34;evdi&amp;#34; Driver &amp;#34;modesetting&amp;#34; Option &amp;#34;AccelMethod&amp;#34; &amp;#34;none&amp;#34; EndSection Don&amp;rsquo;t name it &amp;ldquo;20-evdi.conf&amp;rdquo; but &amp;ldquo;evdidevice.conf&amp;rdquo;. For some reason this works ¯\_(ツ)_/¯"/>
+<meta name="keywords" content="Arch, DisplayLink"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://me.fpkmatthi.xyz/posts/arch-dp/" />
+
+
+
+
+<link rel="stylesheet" href="https://me.fpkmatthi.xyz/assets/style.css">
+
+  <link rel="stylesheet" href="https://me.fpkmatthi.xyz/assets/blue.css">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://me.fpkmatthi.xyz/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="https://me.fpkmatthi.xyz/img/favicon/blue.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Arch DisplayLink :: fpkmatthi — " />
+<meta name="twitter:description" content="I am using a Lenovo USB-C / USB-A docking station and it has DisplayPorts, which means it loads DisplayLink when connecting to Linux.
+Follow the Arch wiki to install the right packages (section 1.2)
+Arch Wiki DisplayLink
+When you have to create the following file:
+/etc/X11/xorg.conf.d/20-evdi.conf Section &amp;#34;OutputClass&amp;#34; Identifier &amp;#34;DisplayLink&amp;#34; MatchDriver &amp;#34;evdi&amp;#34; Driver &amp;#34;modesetting&amp;#34; Option &amp;#34;AccelMethod&amp;#34; &amp;#34;none&amp;#34; EndSection Don&amp;rsquo;t name it &amp;ldquo;20-evdi.conf&amp;rdquo; but &amp;ldquo;evdidevice.conf&amp;rdquo;. For some reason this works ¯\_(ツ)_/¯" />
+<meta name="twitter:site" content="https://me.fpkmatthi.xyz" />
+<meta name="twitter:creator" content="Matthias Van De Velde" />
+<meta name="twitter:image" content="https://me.fpkmatthi.xyz/img/displaylink-logo.webp">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Arch DisplayLink :: fpkmatthi — ">
+<meta property="og:description" content="I am using a Lenovo USB-C / USB-A docking station and it has DisplayPorts, which means it loads DisplayLink when connecting to Linux.
+Follow the Arch wiki to install the right packages (section 1.2)
+Arch Wiki DisplayLink
+When you have to create the following file:
+/etc/X11/xorg.conf.d/20-evdi.conf Section &amp;#34;OutputClass&amp;#34; Identifier &amp;#34;DisplayLink&amp;#34; MatchDriver &amp;#34;evdi&amp;#34; Driver &amp;#34;modesetting&amp;#34; Option &amp;#34;AccelMethod&amp;#34; &amp;#34;none&amp;#34; EndSection Don&amp;rsquo;t name it &amp;ldquo;20-evdi.conf&amp;rdquo; but &amp;ldquo;evdidevice.conf&amp;rdquo;. For some reason this works ¯\_(ツ)_/¯" />
+<meta property="og:url" content="https://me.fpkmatthi.xyz/posts/arch-dp/" />
+<meta property="og:site_name" content="Arch DisplayLink" />
+<meta property="og:image" content="https://me.fpkmatthi.xyz/img/displaylink-logo.webp">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2023-09-06 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    fpkmatthi
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://me.fpkmatthi.xyz/posts/arch-dp/">Arch DisplayLink</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      
+      06-09-623
+    </span>
+    
+    
+    
+    
+    
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://me.fpkmatthi.xyz/tags/arch/">Arch</a>&nbsp;
+    
+    #<a href="https://me.fpkmatthi.xyz/tags/displaylink/">DisplayLink</a>&nbsp;
+    
+  </span>
+  
+
+  
+  <img src="https://me.fpkmatthi.xyz/img/displaylink-logo.webp" class="post-cover" />
+  
+
+  <div class="post-content"><div>
+        <p>I am using a Lenovo USB-C / USB-A docking station and it has DisplayPorts,
+which means it loads DisplayLink when connecting to Linux.</p>
+<p>Follow the Arch wiki to install the right packages (section 1.2)</p>
+<p><a href="https://wiki.archlinux.org/title/DisplayLink">Arch Wiki DisplayLink</a></p>
+<p>When you have to create the following file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">/etc/X11/xorg.conf.d/<span style="color:#ae81ff">20</span>-evdi.conf
+
+Section <span style="color:#e6db74">&#34;OutputClass&#34;</span>
+    Identifier <span style="color:#e6db74">&#34;DisplayLink&#34;</span>
+    MatchDriver <span style="color:#e6db74">&#34;evdi&#34;</span>
+    Driver <span style="color:#e6db74">&#34;modesetting&#34;</span>
+    Option <span style="color:#e6db74">&#34;AccelMethod&#34;</span> <span style="color:#e6db74">&#34;none&#34;</span>
+EndSection
+</code></pre></div><p>Don&rsquo;t name it &ldquo;20-evdi.conf&rdquo; but &ldquo;evdidevice.conf&rdquo;. For some reason this works <code>¯\_(ツ)_/¯</code></p>
+<p>NOTE: The Arch wiki says: Both the HDMI port and DisplayPort outputs created
+when using either a USB-C adapter or Thunderbolt dock are wired to the Nvidia dGPU.</p>
+<p>(<a href="https://wiki.archlinux.org/title/Lenovo_ThinkPad_X1_Extreme#:~:text=Both%20the%20HDMI%20port%20and%20DisplayPort%20outputs%20created%20when%20using%20either%20a%20USB%2DC%20adapter%20or%20Thunderbolt%20dock%20are%20wired%20to%20the%20Nvidia%20dGPU.">link</a>)</p>
+
+      </div></div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="https://me.fpkmatthi.xyz/posts/x86winbofnetw/">
+          <span class="button__text">x86 Windows Remote Buffer Overflow Cheatsheet</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>© fpkmatthi</span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://me.fpkmatthi.xyz/assets/main.js"></script>
+<script src="https://me.fpkmatthi.xyz/assets/prism.js"></script>
+
+
+
+
+
+    
+<footer class="container-fluid text-center text-white mt-4 pt-4 pb-3">
+    <a href="https://github.com/fpkmatthi" alt="link to github account">
+        <i class="mr-3 fab fa-github fa-2x" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/matthias-vdv" alt="link to LinkedIn account">
+        <i class="fab fa-linkedin-in fa-2x" aria-hidden="true"></i>
+    </a>
+</footer>
+
+<script src="https://kit.fontawesome.com/3f37216f26.js" crossorigin="anonymous"></script>
+
+
+  
+</div>
+
+  
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

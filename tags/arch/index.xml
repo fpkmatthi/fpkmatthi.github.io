@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arch on fpkmatthi</title>
+    <link>https://me.fpkmatthi.xyz/tags/arch/</link>
+    <description>Recent content in Arch on fpkmatthi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>fpkmatthi</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://me.fpkmatthi.xyz/tags/arch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Arch DisplayLink</title>
+      <link>https://me.fpkmatthi.xyz/posts/arch-dp/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://me.fpkmatthi.xyz/posts/arch-dp/</guid>
+      <description>I am using a Lenovo USB-C / USB-A docking station and it has DisplayPorts, which means it loads DisplayLink when connecting to Linux.
+Follow the Arch wiki to install the right packages (section 1.2)
+Arch Wiki DisplayLink
+When you have to create the following file:
+/etc/X11/xorg.conf.d/20-evdi.conf Section &amp;#34;OutputClass&amp;#34; Identifier &amp;#34;DisplayLink&amp;#34; MatchDriver &amp;#34;evdi&amp;#34; Driver &amp;#34;modesetting&amp;#34; Option &amp;#34;AccelMethod&amp;#34; &amp;#34;none&amp;#34; EndSection Don&amp;rsquo;t name it &amp;ldquo;20-evdi.conf&amp;rdquo; but &amp;ldquo;evdidevice.conf&amp;rdquo;. For some reason this works ¯\_(ツ)_/¯</description>
+    </item>
+    
+  </channel>
+</rss>

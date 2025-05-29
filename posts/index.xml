@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Matthias</title>
+    <title>Posts on fpkmatthi</title>
     <link>https://me.fpkmatthi.xyz/posts/</link>
-    <description>Recent content in Posts on Matthias</description>
+    <description>Recent content in Posts on fpkmatthi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Matthias Van De Velde</copyright>
-    <lastBuildDate>Sun, 20 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <copyright>fpkmatthi</copyright>
+    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://me.fpkmatthi.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Arch DisplayLink</title>
+      <link>https://me.fpkmatthi.xyz/posts/arch-dp/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://me.fpkmatthi.xyz/posts/arch-dp/</guid>
+      <description>I am using a Lenovo USB-C / USB-A docking station and it has DisplayPorts, which means it loads DisplayLink when connecting to Linux.
+Follow the Arch wiki to install the right packages (section 1.2)
+Arch Wiki DisplayLink
+When you have to create the following file:
+/etc/X11/xorg.conf.d/20-evdi.conf Section &amp;#34;OutputClass&amp;#34; Identifier &amp;#34;DisplayLink&amp;#34; MatchDriver &amp;#34;evdi&amp;#34; Driver &amp;#34;modesetting&amp;#34; Option &amp;#34;AccelMethod&amp;#34; &amp;#34;none&amp;#34; EndSection Don&amp;rsquo;t name it &amp;ldquo;20-evdi.conf&amp;rdquo; but &amp;ldquo;evdidevice.conf&amp;rdquo;. For some reason this works ¯\_(ツ)_/¯</description>
+    </item>
     
     <item>
       <title>x86 Windows Remote Buffer Overflow Cheatsheet</title>
@@ -19,7 +32,7 @@
       
       <guid>https://me.fpkmatthi.xyz/posts/x86winbofnetw/</guid>
       <description>Template code
-Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run  Repeat after every crash  Linux VM Scan the victim IP
+Prerequisites  Windows VM  Immunity Debugger PATH contains C:\python27 C:\python27\Pycommands\mona.py   Linux VM  Kali, Parrot, custom build   Both VMs need to contact each other A will to live  Windows VM  Launch Immunity Debugger as Administrator File &amp;gt; Open &amp;gt; vulnserver.exe Set it to run &amp;lt;F9&amp;gt; Repeat after every crash  Linux VM Scan the victim IP
 nmap -p- &amp;lt;ip&amp;gt; Connect to the port where the app listens on</description>
     </item>
     
@@ -34,16 +47,6 @@ nmap -sn -oG nmap/host_discovery.txt 192.168.56.0/24
 Output:
 &amp;lt;snippet&amp;gt; Nmap scan report for 192.168.56.104 Host is up (0.00082s latency). Service enum Now we can launch a targeted port scan
 nmap -sC -sV -oG nmap/service_enum.txt -v 192.</description>
-    </item>
-    
-    <item>
-      <title>i3Talent</title>
-      <link>https://me.fpkmatthi.xyz/posts/i3talent/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://me.fpkmatthi.xyz/posts/i3talent/</guid>
-      <description>Ofman quadrants    Qualities Too much Advice from others Dislike     Ambitious Dissatisfied Letting go Indifferent   Goal oriented Short-sighted Wide view Indecisive   Helpful Meddlesome Letting go Indifferent    Profession test Type: Doctor
-Schein test  Being good at something (24 pts.) Independence (15 pts.) Social contacts (0 pts.)  </description>
     </item>
     
     <item>
@@ -76,27 +79,6 @@ Content  Starting a new repo Deploying dotfiles on a new system Final script  St
 Content  Kick-off Docker Hugo Linking Github Pages Conclusion  Kick-off Create and open a new project folder
 mkdir -p ~/portfolio cd ~/portfolio Docker Install docker (refer to the Arch Wiki ¯\(ツ)/¯ ) sudo pacman -S docker Creating docker image Alpine Linux is used as the base image
 FROMalpine:latestRUN apk add --no-cache \  curl \  git \  openssh-client \  rsync \  bash \  hugoENV VERSION=0.</description>
-    </item>
-    
-    <item>
-      <title>i2Talent</title>
-      <link>https://me.fpkmatthi.xyz/posts/i2talent/</link>
-      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://me.fpkmatthi.xyz/posts/i2talent/</guid>
-      <description>Competence test </description>
-    </item>
-    
-    <item>
-      <title>i1Talent</title>
-      <link>https://me.fpkmatthi.xyz/posts/i1talent/</link>
-      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://me.fpkmatthi.xyz/posts/i1talent/</guid>
-      <description>DISC test 
-The DISC model consists out of 4 temperaments(Dominance, Influence, Conscientiousness, Stability) and charts ones preferences, strong sides, communication and growth opportunities.
-Perks of dominance:
- Loving competition and challenges. Goal-oriented and craves recognition for efforts. Aiming high, wants to call the shots and is generally inventive and ingenious. Mostly independent and individualistic.  Enneagram test The 2 types that stuck out the most were seller and perfectionist. According to the legend, these 2 types mean the following:</description>
     </item>
     
   </channel>
